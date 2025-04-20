@@ -181,8 +181,32 @@ margin: 5px;
 	}
 }
 
-/* ===== MOBILE VERSION ===== */
-@media (max-width: 768px) {
+/* ===== Responsive: max-width 950px (Tablet) ===== */
+@media (max-width: 950px) {
+	.image-wrapper {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.destination__card1,
+	.destination__card2,
+	.destination__card3,
+	.destination__card4,
+	.destination__card5,
+	.destination__card6 {
+		width: 45%;
+		height: auto;
+		margin: 10px;
+	}
+
+	.mainImage {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+/* ===== Responsive: max-width 600px (Phones & small tablets) ===== */
+@media (max-width: 600px) {
 	.image-wrapper {
 		flex-direction: column;
 		align-items: center;
@@ -206,7 +230,7 @@ margin: 5px;
 
 	.gallery .thumb {
 		width: 100px;
-		height: 150px;
+		height: 140px;
 	}
 
 	.modal-content {
@@ -214,21 +238,34 @@ margin: 5px;
 		margin: 20% auto;
 	}
 
+	video {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+/* ===== Responsive: max-width 440px (Small phones) ===== */
+@media (max-width: 440px) {
+	.gallery .thumb {
+		width: 90px;
+		height: 130px;
+	}
+
+	.close,
+	.close-zoom {
+		font-size: 24px;
+		top: 10px;
+		right: 10px;
+	}
+
 	#zoomedImage {
 		max-width: 95%;
 		max-height: 80%;
 	}
 
-	.close,
-	.close-zoom {
-		font-size: 28px;
-		top: 15px;
-		right: 15px;
-	}
-
-	video {
-		width: 90% !important;
-		height: auto !important;
+	.modal-content {
+		width: 98%;
+		margin: 25% auto;
 	}
 }
 

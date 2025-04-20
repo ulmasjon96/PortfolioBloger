@@ -1,0 +1,103 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio Website</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Arvo&family=Montserrat&family=Pacifico&family=Satisfy&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav>
+			<div class="nav-box">
+				<div class="logo"><span>DJUNA</span></div>
+				<div class="nav-container">
+					<div class="links">
+						<a href="#home" class="link">Home</a>
+						<a href="#skills" class="link">Skills</a>
+						<a href="#intro" class="link">Introduction</a>
+						<a href="#services" class="link">Services</a>
+						<a href="#contact" class="link">Contact</a>
+						<a href="#contact" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Hire me</a>
+					</div>
+				</div>
+			</div>
+			<i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+			<div class="dropdown" id="dropdown">
+				<div class="links">
+					<a href="#home" class="link">Home</a>
+					<a href="#skills" class="link">Skills</a>
+					<a href="#intro" class="link">Introduction</a>
+					<a href="#services" class="link">Services</a>
+					<a href="#contact" class="link">Contact</a>
+					<i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+					<a href="#contact" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Hire me</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Home Section -->
+		<!-- Typewriter effekti uchun div qismi -->
+		<section class="section-home">
+			<div class="main-container">
+				<div class="content">
+					<h1>Hey I'm <span>MARJONA</span></h1>
+					<div class="typewriter">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quod quibusdam ratione illo consectetur
+						atque non iusto aspernatur numquam.
+					</p>
+					<div class="social-links">
+						<i class="fa-brands fa-linkedin"></i>
+						<i class="fa-brands fa-github"></i>
+						<i class="fa-brands fa-facebook"></i>
+						<i class="fa-brands fa-twitter"></i>
+					</div>
+					<button>Download CV</button>
+				</div>
+				<div class="image">
+					<img src="./img/Снимок экрана 2025-04-18 211125.png" alt="" />
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer" id="contact">
+			<div class="section__container footer__container">
+				<div class="footer__col">
+					<h3>Code Champion<span>.</span></h3>
+					<p>Explore your suitable and dream places around the world. Here you can find your right destination.</p>
+				</div>
+				<div class="footer__col">
+					<h4>Support</h4>
+					<p>FAQs</p>
+					<p>Terms & Conditions</p>
+					<p>Privacy Policy</p>
+					<p>Contact Us</p>
+				</div>
+				<div class="footer__col">
+					<h4>Address</h4>
+					<p><span>Address:</span> 280 Wilson Street, Cima, California, 92323, United States</p>
+					<p><span>Email:</span> info@codechampion.com</p>
+					<p><span>Phone:</span> +91 9876543210</p>
+				</div>
+			</div>
+			<div class="footer__bar">Copyright © 2023 Web Design Mastery. All rights reserved.</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="./js/script.js"></script>
+		<script>
+			AOS.init({ offset: 0 });
+		</script>
+	</body>
+</html>

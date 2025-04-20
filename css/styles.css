@@ -244,10 +244,11 @@ nav {
 }
 
 .destination__card img:hover {
-	transform: scale(1.2);
+	transform: scale(1.2) ;
 	border-radius: 1rem;
 
 	transition: transform 0.8s ease-in-out, border-radius 0.8s ease-in-out;
+
 }
 
 .destination__details {
@@ -461,7 +462,6 @@ nav {
 	.hamburg,
 	.cancel {
 		display: block;
-		margin-top: -17px;
 	}
 
 	.main-container .content {

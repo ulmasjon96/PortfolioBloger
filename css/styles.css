@@ -5,7 +5,7 @@
   --text-dark: #000;
   --text-light: #767268;
   --extra-light: #ffffff;
-  --max-width: 1200px;
+  --max-width: 1250px;
 }
 
 * {
@@ -39,7 +39,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12rem;
   padding-left: 50px;
 }
 
@@ -86,7 +85,6 @@ nav {
   position: relative;
   transition: 0.3s ease;
 }
-
 .link:hover {
   color: #b711e0;
 }
@@ -109,11 +107,12 @@ nav {
 }
 
 #hire-me {
+
   background-color: #b711a0;
   color: black;
   border-radius: 5px;
   padding: 0.2rem 0.5rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 #hire-me:hover {
@@ -151,9 +150,6 @@ nav {
   width: 100%;
 }
 
-.dropdown .links a:hover {
-  /* background-color: #b711e0; */
-}
 
 /* Section Home */
 .section-home {
@@ -257,6 +253,7 @@ nav {
 
 /* Footer */
 .footer {
+
   background-color: var(--text-dark);
   color: var(--secondary-color);
   padding: 2rem 1rem;
@@ -306,6 +303,13 @@ nav {
 
 /* Media Queries */
 @media (max-width: 900px) {
+
+.footer__container {
+    width: 95%;
+		/* height: auto; */
+    /* grid-template-columns: 1fr; */
+  }
+
 	.section-home {
 		height: auto;
 		padding-bottom: 50px;
@@ -315,10 +319,6 @@ nav {
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: column-reverse;
-	}
-
-	.logo{
-
 	}
 
 	.nav-container .links {
@@ -332,7 +332,7 @@ nav {
 	}
 
 	.main-container .content {
-		width: 80%;
+		width: 90%;
 	}
 
 	.main-container .image {
@@ -350,6 +350,7 @@ nav {
 
 @media (max-width: 600px) {
   .footer__container {
+    width: 95%;
 		height: auto;
     grid-template-columns: 1fr;
   }

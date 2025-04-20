@@ -181,6 +181,58 @@ margin: 5px;
 	}
 }
 
+/* ===== MOBILE VERSION ===== */
+@media (max-width: 768px) {
+	.image-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.destination__card1,
+	.destination__card2,
+	.destination__card3,
+	.destination__card4,
+	.destination__card5,
+	.destination__card6 {
+		width: 90%;
+		height: auto;
+		margin: 10px 0;
+	}
+
+	.mainImage {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	.gallery .thumb {
+		width: 100px;
+		height: 150px;
+	}
+
+	.modal-content {
+		width: 95%;
+		margin: 20% auto;
+	}
+
+	#zoomedImage {
+		max-width: 95%;
+		max-height: 80%;
+	}
+
+	.close,
+	.close-zoom {
+		font-size: 28px;
+		top: 15px;
+		right: 15px;
+	}
+
+	video {
+		width: 90% !important;
+		height: auto !important;
+	}
+}
+
+
 nav {
 	width: 100%;
 	height: 10vh;

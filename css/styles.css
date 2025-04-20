@@ -25,259 +25,11 @@ html {
 	scroll-behavior: smooth;
 }
 
-.image-wrapper {
-	display: flex;
-}
-.destination__card1{
-	height: 315px;
-	margin: 5px;
-}
-.destination__card2{
-	height: 430px;
-	margin: 5px;
-}
-.destination__card3{
-height: 430px;
-margin: 5px;
-}
-.destination__card4{
-height: 545px;
-margin: 5px;
-margin-top: -110px;
-}
-.destination__card5{
-height: 430px;
-margin: 5px;
-}
-.destination__card6{
-height: 430px;
-margin: 5px;
-}
-/* Modal oynasi */
-.modal {
-	position: fixed;
-	display: none;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Modal ichidagi kontent */
-.modal-content {
-	position: relative;
-	margin: 10% auto;
-	width: 90%;
-	background-color: #ffffff00;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Modalni yopish tugmasi */
-.close {
-	position: absolute;
-	top: -10px;
-	right: -15px;
-	color: #aaa;
-	font-size: 28px;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-/* Modal oynasini yopish tugmasiga hover effekti */
-.close:hover,
-.close:focus {
-	color: rgba(0, 0, 0, 0);
-	text-decoration: none;
-	cursor: pointer;
-}
-
-/* Galereya ichidagi kichik rasmlar (thumb) */
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.gallery .thumb {
-	width: 200px;
-	height: 300px;
-	object-fit: cover;
-	margin: 5px;
-	cursor: pointer;
-	border-radius: 5px;
-	transition: transform 0.3s ease;
-}
-
-.gallery .thumb:hover {
-	transform: scale(1.1);
-}
-
-/* Zoom modal oynasi */
-#zoomModal {
-	position: fixed;
-	display: none;
-	z-index: 1001;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	/* overflow: auto; */
-	background-color: rgba(0, 0, 0, 0.9);
-
-}
-
-/* Zoom modal ichidagi katta rasm */
-#zoomedImage {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-
-	max-width: 90%;
-	max-height: 90%;
-	border-radius: 10px;
-	box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
-
-/* Zoom oynani yopish tugmasi */
-.close-zoom {
-	position: absolute;
-	top: 20px;
-	right: 30px;
-	color: white;
-	font-size: 40px;
-	font-weight: bold;
-	cursor: pointer;
-	z-index: 1002;
-}
-
-/* Katta rasmni zoom qilib ko‘rsatishdan oldin o‘rtaga kelishi uchun transition */
-.zoomed-img {
-	transition: transform 0.3s ease;
-}
-
-/* Kichik rasmlar uchun umumiy uslublar */
-.mainImage {
-	cursor: pointer;
-	border-radius: 10px;
-	transition: transform 0.3s ease;
-	overflow: hidden;
-}
-
-.mainImage:hover {
-	transform: scale(1.05);
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: scale(0.95);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
-
-/* ===== Responsive: max-width 950px (Tablet) ===== */
-@media (max-width: 950px) {
-	.image-wrapper {
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.destination__card1,
-	.destination__card2,
-	.destination__card3,
-	.destination__card4,
-	.destination__card5,
-	.destination__card6 {
-		width: 45%;
-		height: auto;
-		margin: 10px;
-	}
-
-	.mainImage {
-		width: 100% !important;
-		height: auto !important;
-	}
-}
-
-/* ===== Responsive: max-width 600px (Phones & small tablets) ===== */
-@media (max-width: 600px) {
-	.image-wrapper {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.destination__card1,
-	.destination__card2,
-	.destination__card3,
-	.destination__card4,
-	.destination__card5,
-	.destination__card6 {
-		width: 90%;
-		height: auto;
-		margin: 10px 0;
-	}
-
-	.mainImage {
-		width: 100% !important;
-		height: auto !important;
-	}
-
-	.gallery .thumb {
-		width: 100px;
-		height: 140px;
-	}
-
-	.modal-content {
-		width: 95%;
-		margin: 20% auto;
-	}
-
-	video {
-		width: 100% !important;
-		height: auto !important;
-	}
-}
-
-/* ===== Responsive: max-width 440px (Small phones) ===== */
-@media (max-width: 440px) {
-	.gallery .thumb {
-		width: 90px;
-		height: 130px;
-	}
-
-	.close,
-	.close-zoom {
-		font-size: 24px;
-		top: 10px;
-		right: 10px;
-	}
-
-	#zoomedImage {
-		max-width: 95%;
-		max-height: 80%;
-	}
-
-	.modal-content {
-		width: 98%;
-		margin: 25% auto;
-	}
-}
-
-
 nav {
 	width: 100%;
 	height: 10vh;
-	/* position: sticky; */
-	/* top: 0; */
+	/* position: sticky;
+	top: 0; */
 	z-index: 100;
 	background-color: transparent;
 	margin-top: 20px;
@@ -630,6 +382,254 @@ nav {
 	object-fit: cover;
 }
 
+.image-wrapper {
+	display: flex;
+}
+.destination__card1{
+	height: 315px;
+	margin: 5px;
+}
+.destination__card2{
+	height: 430px;
+	margin: 5px;
+}
+.destination__card3{
+height: 430px;
+margin: 5px;
+}
+.destination__card4{
+height: 545px;
+margin: 5px;
+margin-top: -110px;
+}
+.destination__card5{
+height: 430px;
+margin: 5px;
+}
+.destination__card6{
+height: 430px;
+margin: 5px;
+}
+/* Modal oynasi */
+.modal {
+	position: fixed;
+	display: none;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal ichidagi kontent */
+.modal-content {
+	position: relative;
+	margin: 10% auto;
+	width: 90%;
+	background-color: #ffffff00;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modalni yopish tugmasi */
+.close {
+	position: absolute;
+	top: -10px;
+	right: -15px;
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Modal oynasini yopish tugmasiga hover effekti */
+.close:hover,
+.close:focus {
+	color: rgba(0, 0, 0, 0);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Galereya ichidagi kichik rasmlar (thumb) */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gallery .thumb {
+	width: 200px;
+	height: 300px;
+	object-fit: cover;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: transform 0.3s ease;
+}
+
+.gallery .thumb:hover {
+	transform: scale(1.1);
+}
+
+/* Zoom modal oynasi */
+#zoomModal {
+	position: fixed;
+	display: none;
+	z-index: 1001;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/* overflow: auto; */
+	background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+/* Zoom modal ichidagi katta rasm */
+#zoomedImage {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	max-width: 90%;
+	max-height: 90%;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Zoom oynani yopish tugmasi */
+.close-zoom {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+	z-index: 1002;
+}
+
+/* Katta rasmni zoom qilib ko‘rsatishdan oldin o‘rtaga kelishi uchun transition */
+.zoomed-img {
+	transition: transform 0.3s ease;
+}
+
+/* Kichik rasmlar uchun umumiy uslublar */
+.mainImage {
+	cursor: pointer;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
+	overflow: hidden;
+}
+
+.mainImage:hover {
+	transform: scale(1.05);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* ===== Responsive: max-width 950px (Tablet) ===== */
+@media (max-width: 950px) {
+	.image-wrapper {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.destination__card1,
+	.destination__card2,
+	.destination__card3,
+	.destination__card4,
+	.destination__card5,
+	.destination__card6 {
+		width: 45%;
+		height: auto;
+		margin: 10px;
+	}
+
+	.mainImage {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+/* ===== Responsive: max-width 600px (Phones & small tablets) ===== */
+@media (max-width: 600px) {
+	.image-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.destination__card1,
+	.destination__card2,
+	.destination__card3,
+	.destination__card4,
+	.destination__card5,
+	.destination__card6 {
+		width: 90%;
+		height: auto;
+		margin: 10px 0;
+	}
+
+	.mainImage {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	.gallery .thumb {
+		width: 100px;
+		height: 140px;
+	}
+
+	.modal-content {
+		width: 95%;
+		margin: 20% auto;
+	}
+
+	video {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+/* ===== Responsive: max-width 440px (Small phones) ===== */
+@media (max-width: 440px) {
+	.gallery .thumb {
+		width: 90px;
+		height: 130px;
+	}
+
+	.close,
+	.close-zoom {
+		font-size: 24px;
+		top: 10px;
+		right: 10px;
+	}
+
+	#zoomedImage {
+		max-width: 95%;
+		max-height: 80%;
+	}
+
+	.modal-content {
+		width: 98%;
+		margin: 25% auto;
+	}
+}
+
+
 /* Footer */
 .footer {
 	background-color: var(--text-dark);
@@ -722,9 +722,6 @@ nav {
 		margin-bottom: 50px;
 	}
 
-	/* .content button {
-		margin: 15px 25%;
-	} */
 }
 
 @media (max-width: 600px) {

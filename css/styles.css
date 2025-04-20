@@ -28,8 +28,8 @@ html {
 nav {
 	width: 100%;
 	height: 10vh;
-	position: sticky;
-	top: 0;
+	/* position: sticky; */
+	/* top: 0; */
 	z-index: 100;
 	background-color: transparent;
 	margin-top: 20px;
@@ -193,16 +193,31 @@ nav {
 	display: grid;
 	place-content: center;
 	color: white;
-	border: 1px solid var(--white); /* Fix qilingan */
+
 	border-radius: 100%;
 	font-size: 1.5rem;
 	cursor: pointer;
 	transition: 0.3s;
+	background-color: #b711e0;
+	i {
+		font-size: 30px;
+		color: #000;
+	}
 }
 
 .destination__nav span:hover {
-	color: #b711a0;
-	background-color: white;
+	color: #b711e0;
+	background-color: #000000;
+	border: 2px solid #b711e0;
+	box-shadow: 0 0 40px 5px #b711e0;
+	scale: 1.05;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	i {
+		font-size: 35px;
+		color: #b711e0;
+	}
 }
 
 .destination__grid {

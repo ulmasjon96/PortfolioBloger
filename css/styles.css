@@ -25,6 +25,162 @@ html {
 	scroll-behavior: smooth;
 }
 
+.image-wrapper {
+	display: flex;
+}
+.destination__card1{
+	height: 315px;
+	margin: 5px;
+}
+.destination__card2{
+	height: 430px;
+	margin: 5px;
+}
+.destination__card3{
+height: 430px;
+margin: 5px;
+}
+.destination__card4{
+height: 545px;
+margin: 5px;
+margin-top: -110px;
+}
+.destination__card5{
+height: 430px;
+margin: 5px;
+}
+.destination__card6{
+height: 430px;
+margin: 5px;
+}
+/* Modal oynasi */
+.modal {
+	position: fixed;
+	display: none;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal ichidagi kontent */
+.modal-content {
+	position: relative;
+	margin: 10% auto;
+	width: 90%;
+	background-color: #ffffff00;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modalni yopish tugmasi */
+.close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* Modal oynasini yopish tugmasiga hover effekti */
+.close:hover,
+.close:focus {
+	color: rgba(0, 0, 0, 0);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Galereya ichidagi kichik rasmlar (thumb) */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gallery .thumb {
+	width: 200px;
+	height: 300px;
+	object-fit: cover;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: transform 0.3s ease;
+}
+
+.gallery .thumb:hover {
+	transform: scale(1.1);
+}
+
+/* Zoom modal oynasi */
+#zoomModal {
+	position: fixed;
+	display: none;
+	z-index: 1001;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Zoom modal ichidagi katta rasm */
+#zoomedImage {
+	/* max-width: 90%;
+	max-height: 90%; */
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Zoom oynani yopish tugmasi */
+.close-zoom {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+	z-index: 1002;
+}
+
+/* Katta rasmni zoom qilib ko‘rsatishdan oldin o‘rtaga kelishi uchun transition */
+.zoomed-img {
+	transition: transform 0.3s ease;
+}
+
+/* Kichik rasmlar uchun umumiy uslublar */
+.mainImage {
+	cursor: pointer;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
+	overflow: hidden;
+}
+
+.mainImage:hover {
+	transform: scale(1.05);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 nav {
 	width: 100%;
 	height: 10vh;
@@ -244,11 +400,10 @@ nav {
 }
 
 .destination__card img:hover {
-	transform: scale(1.2) ;
+	transform: scale(1.2);
 	border-radius: 1rem;
 
 	transition: transform 0.8s ease-in-out, border-radius 0.8s ease-in-out;
-
 }
 
 .destination__details {

@@ -57,3 +57,56 @@ function eraseText() {
 
 // 📌 Sahifa yuklanganda Typewriter boshlansin
 window.onload = typeWriter;
+
+document.addEventListener('DOMContentLoaded', function () {
+	// Barcha asosiy rasm (mainImage) larni olish
+	const mainImages = document.querySelectorAll('.mainImage');
+
+	mainImages.forEach((image, index) => {
+		const modalId = image.getAttribute('data-gallery');
+		const modal = document.getElementById(modalId);
+		const closeBtn = modal.querySelector('.close');
+
+		// Bosganda modalni ko‘rsatish
+		image.addEventListener('click', function () {
+			modal.style.display = 'block';
+		});
+
+		// Yopish tugmasi
+		closeBtn.addEventListener('click', function () {
+			modal.style.display = 'none';
+		});
+
+		// Modal tashqarisiga bosganda yopish
+		window.addEventListener('click', function (event) {
+			if (event.target === modal) {
+				modal.style.display = 'none';
+			}
+		});
+
+		// Har bir kichik rasmga (thumb) zoom qilish
+		const thumbs = modal.querySelectorAll('.thumb');
+		const zoomModal = document.getElementById('zoomModal');
+		const zoomedImage = document.getElementById('zoomedImage');
+		const closeZoomBtn = document.querySelector('.close-zoom');
+
+		thumbs.forEach(thumb => {
+			thumb.addEventListener('click', function () {
+				zoomedImage.src = this.src;
+				zoomModal.style.display = 'block';
+			});
+		});
+
+		// Zoom modalni yopish
+		closeZoomBtn.addEventListener('click', function () {
+			zoomModal.style.display = 'none';
+		});
+
+		// Zoom tashqarisiga bosganda yopish
+		window.addEventListener('click', function (event) {
+			if (event.target === zoomModal) {
+				zoomModal.style.display = 'none';
+			}
+		});
+	});
+});

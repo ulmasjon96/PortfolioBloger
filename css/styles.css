@@ -19,10 +19,14 @@ body {
 	height: 100vh;
 	background-color: black;
 	font-family: 'Arvo', serif;
+
 }
 
 html {
 	scroll-behavior: smooth;
+}
+
+#nav{
 }
 
 nav {
@@ -33,13 +37,15 @@ nav {
 	z-index: 100;
 	background-color: transparent;
 	margin-top: 20px;
+
 }
 
 .nav-box {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	padding-left: 50px;
+	padding-left: 200px;
+
 }
 
 .nav-container {

@@ -10,6 +10,20 @@ function cancel() {
 	dropdown.style.transform = 'translateY(-500px)'; // Yuqoriga chiqib, yashiriladi
 }
 
+// ⌨️ ESC tugmasi bilan menyuni yopish
+document.addEventListener('keydown', e => {
+	if (e.key === 'Escape') {
+		cancel();
+	}
+});
+
+// 🖱️ Link bosilganda menyuni yopish
+document.querySelectorAll('.dropdown .link').forEach(link => {
+	link.addEventListener('click', () => {
+		cancel(); // menyuni yopadi
+	});
+});
+
 // 🖋 Typewriter effekt uchun so'zlar ro'yxati
 const texts = [` SMM MARKETER`, ' PHOTOGRAPHER', ' BLOGGER'];
 

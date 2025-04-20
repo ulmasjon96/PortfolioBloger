@@ -699,19 +699,17 @@ nav {
 }
 
 .services .content-card .card {
-	/* background-color: #ffffff00; */
 	width: 340px;
 	margin: 10px;
 	padding: 25px;
-	/* background: #ffffff; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	border-radius: 10px;
 	box-shadow: 0 5px 25px #ffffff;
-	color: rgb(252, 0, 0);
 	transition: 0.3s linear;
+	margin-bottom: 50px;
 }
 
 .services .content-card .card .service-icon {
@@ -815,8 +813,6 @@ nav {
 	font-size: 1.5rem;
 	margin-bottom: 1rem;
 }
-
-
 
 .footer__col h4 {
 	font-size: 1.1rem;

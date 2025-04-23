@@ -11,14 +11,15 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bilbo+Swash+Caps&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Satisfy&display=swap"
-			rel="stylesheet" />
+		href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bilbo+Swash+Caps&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Satisfy&display=swap"
+		rel="stylesheet" />
 		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
 	</head>
 	<body>
+		<!-- read more tugmasini bosganda Introduction malumotlari chiqishi kerak -->
 		<!-- Navigation -->
 		<nav id="nav">
 			<div class="nav-box">
@@ -48,8 +49,6 @@
 			</div>
 		</nav>
 
-		<!-- Home Section -->
-		<!-- Typewriter effekti uchun div qismi -->
 		<section class="section-home">
 			<div class="main-container">
 				<div class="content">
@@ -65,40 +64,67 @@
 						<i class="bx bxl-instagram-alt"></i>
 						<i class="fa-brands fa-twitter"></i>
 					</div>
-					<button>Download CV</button>
-				</div>
-				<div class="image">
+					<button id="showMoreBtn">Ko'proq bilish</button>
+        </div>
+        <div class="image">
 					<img src="./img/Снимок экрана 2025-04-18 211125.png" alt="" />
-				</div>
+        </div>
 			</div>
-		</section>
 
-		<section class="section__container destination__container">
-			<div class="section__header">
-				<div>
-					<h2 class="section__title">Explore top destinations</h2>
-					<p class="section__subtitle">
-						Explore your suitable and dream places around the world. Here you can find your right destination.
-					</p>
+			<!-- Pastda yashiringan qism -->
+    <div class="more-info" id="moreInfo">
+			<h2>Men haqimda</h2>
+			<p class="intro-text">
+				Men [Ismingiz], web-ishlab chiqaruvchi, dizayner, SMM marketolog, bloger va professional fotografman. Har doim
+				kreativ, innovatsion va samarali loyihalar ustida ishlayman. Mijozlar bilan ishlash, brend yaratish va san'at
+				bilan texnologiyani uyg‘unlashtirish - mening kuchli tomonlarimdan biridir.
+			</p>
+			<div class="about-cards">
+				<div class="card">
+					<i class="fas fa-code"></i>
+					<h3>Web Development</h3>
+					<p>Modern saytlar, responsiv dizayn va foydalanuvchi tajribasiga asoslangan interfeyslar yarataman.</p>
 				</div>
-				<div class="destination__nav">
-					<span><i class="ri-arrow-left-s-line"></i></span>
-					<span><i class="ri-arrow-right-s-line"></i></span>
+				<div class="card">
+					<i class="fas fa-bullhorn"></i>
+					<h3>SMM Marketing</h3>
+					<p>Brending, kontent rejalashtirish va ijtimoiy tarmoqlarda kuchli ishtirok yarataman.</p>
 				</div>
-			</div>
-			<div class="destination__grid">
-				<div class="destination__card">
-					<img src="./img/destination-1.jpg" alt="destination" />
-					<div class="destination__details">
-						<p class="destination__title">Banff</p>
-						<p class="destination__subtitle">Canada</p>
+				<div class="card">
+					<i class="fas fa-camera"></i>
+					<h3>Photography</h3>
+					<p>Tadbirlardan tortib shaxsiy portretlargacha yuqori sifatli suratga olish xizmatlari taqdim etaman.</p>
+				</div>
+
+			</section>
+
+
+			<section class="section__container destination__container">
+				<div class="section__header">
+					<div>
+						<h2 class="section__title">Explore top destinations</h2>
+						<p class="section__subtitle">
+							Explore your suitable and dream places around the world. Here you can find your right destination.
+						</p>
+					</div>
+					<div class="destination__nav">
+						<span><i class="ri-arrow-left-s-line"></i></span>
+						<span><i class="ri-arrow-right-s-line"></i></span>
 					</div>
 				</div>
-				<div class="destination__card">
-					<img src="./img/destination-2.jpg" alt="destination" />
-					<div class="destination__details">
-						<p class="destination__title">Machu Picchu</p>
-						<p class="destination__subtitle">Peru</p>
+				<div class="destination__grid">
+					<div class="destination__card">
+						<img src="./img/destination-1.jpg" alt="destination" />
+						<div class="destination__details">
+							<p class="destination__title">Banff</p>
+							<p class="destination__subtitle">Canada</p>
+						</div>
+					</div>
+					<div class="destination__card">
+						<img src="./img/destination-2.jpg" alt="destination" />
+						<div class="destination__details">
+							<p class="destination__title">Machu Picchu</p>
+							<p class="destination__subtitle">Peru</p>
 					</div>
 				</div>
 				<div class="destination__card">
@@ -126,10 +152,10 @@
 
 					<div class="destination__card destination__card1">
 						<img
-							src="./img/sayoxat.jpg"
-							class="mainImage mainImage5"
-							data-gallery="gallery5"
-							style="width: 314px; height: 315px; cursor: pointer" />
+						src="./img/sayoxat.jpg"
+						class="mainImage mainImage5"
+						data-gallery="gallery5"
+						style="width: 314px; height: 315px; cursor: pointer" />
 						<div class="destination__details">
 							<p class="destination__title">Lauterbrunnen</p>
 							<p class="destination__subtitle">Switzerland</p>
@@ -154,10 +180,10 @@
 					<!-- 2-Gallery -->
 					<div class="destination__card destination__card2">
 						<img
-							src="./img/djunaOqQoraRasm1.jpg"
-							class="mainImage mainImage2"
-							data-gallery="gallery2"
-							style="width: 313px; height: 430px; cursor: pointer" />
+						src="./img/djunaOqQoraRasm1.jpg"
+						class="mainImage mainImage2"
+						data-gallery="gallery2"
+						style="width: 313px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
 							<p class="destination__title">Lauterbrunnen</p>
 							<p class="destination__subtitle">Switzerland</p>
@@ -177,10 +203,10 @@
 					<!-- 3-Gallery -->
 					<div class="destination__card destination__card3">
 						<img
-							src="./img/djunaAndSon8.jpg"
-							class="mainImage mainImage3"
-							data-gallery="gallery3"
-							style="width: 503px; height: 430px; cursor: pointer" />
+						src="./img/djunaAndSon8.jpg"
+						class="mainImage mainImage3"
+						data-gallery="gallery3"
+						style="width: 503px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
 							<p class="destination__title">Lauterbrunnen</p>
 							<p class="destination__subtitle">Switzerland</p>
@@ -208,10 +234,10 @@
 					<!-- 4-Gallery -->
 					<div class="destination__card destination__card4">
 						<img
-							src="./img/dlunaBahor1.jpg"
-							class="mainImage mainImage4"
-							data-gallery="gallery4"
-							style="width: 314px; height: 545px; cursor: pointer" />
+						src="./img/dlunaBahor1.jpg"
+						class="mainImage mainImage4"
+						data-gallery="gallery4"
+						style="width: 314px; height: 545px; cursor: pointer" />
 						<div class="destination__details">
 							<p class="destination__title">Lauterbrunnen</p>
 							<p class="destination__subtitle">Switzerland</p>
@@ -231,10 +257,10 @@
 					<!-- 5-Gallery -->
 					<div class="destination__card destination__card5">
 						<img
-							src="./img/432605780_376267738623597_4969665727576245015_n.jpg"
-							class="mainImage mainImage1"
-							data-gallery="gallery1"
-							style="width: 510px; height: 430px; cursor: pointer" />
+						src="./img/432605780_376267738623597_4969665727576245015_n.jpg"
+						class="mainImage mainImage1"
+						data-gallery="gallery1"
+						style="width: 510px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
 							<p class="destination__title">Lauterbrunnen</p>
 							<p class="destination__subtitle">Switzerland</p>
@@ -254,10 +280,10 @@
 					<!-- 6-Gallery -->
 					<div class="destination__card destination__card6">
 						<img
-							src="./img/2025new.jpg"
-							class="mainImage mainImage6"
-							data-gallery="gallery6"
-							style="width: 307px; height: 430px; cursor: pointer" />
+						src="./img/2025new.jpg"
+						class="mainImage mainImage6"
+						data-gallery="gallery6"
+						style="width: 307px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
 							<p class="destination__title">Lauterbrunnen</p>
 							<p class="destination__subtitle">Switzerland</p>
@@ -344,35 +370,33 @@
 				</div>
 			</div>
 		</section>
-
 		<!-- Footer -->
 		<footer class="footer" id="contact">
-			<div class="footer__container">
-				<div class="footer__col">
-					<h3>Code Champion<span>.</span></h3>
-					<p>Explore your suitable and dream places around the world. Here you can find your right destination.</p>
-				</div>
-				<div class="footer__col">
-					<h4>Support</h4>
-					<p>FAQs</p>
-					<p>Terms & Conditions</p>
-					<p>Privacy Policy</p>
-					<p>Contact Us</p>
-				</div>
-				<div class="footer__col">
-					<h4>Address</h4>
-					<p><span>Address:</span> 280 Wilson Street, Cima, California, 92323, United States</p>
-					<p><span>Email:</span> info@codechampion.com</p>
-					<p><span>Phone:</span> +91 9876543210</p>
-				</div>
+			<div class="section-8__btn">
+				<a href="#">
+					<i class="bx bx-chevrons-up"></i>
+					<span class="back-to-top-text">BACK TO TOP</span>
+				</a>
 			</div>
-			<div class="footer__bar">Copyright © 2023 Web Design Mastery. All rights reserved.</div>
-		</footer>
-		<!-- Scripts -->
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script src="./js/script.js"></script>
-		<script>
-			AOS.init({ offset: 0 });
-		</script>
-	</body>
+
+  <div class="section-8__box">
+		<a href="#"><i class="bx bxl-github"></i></a>
+    <a href="#"><i class="bx bxl-vk"></i></a>
+    <a href="#"><i class="bx bxl-telegram"></i></a>
+    <a href="mailto:your@email.com"><i class="bx bxl-gmail"></i></a>
+  </div>
+
+  <div class="section-8__text">
+		<h1>&copy; <span id="year"></span> Ismatov O'lmasjon <span>All Rights Reserved.</span></h1>
+  </div>
+</footer>
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./js/script.js"></script>
+<script>
+	AOS.init({ offset: 0 });
+</script>
+</body>
 </html>
+
+<div></div>

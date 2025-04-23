@@ -288,7 +288,11 @@ nav {
 /* Section Home */
 .section-home {
 	width: 100%;
-	height: 92vh;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .main-container {
@@ -383,6 +387,76 @@ nav {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+#moreInfo {
+	display: none; /* Dastlab yashirin */
+}
+#moreInfo {
+	/* max-height: 0; */
+	/* overflow: hidden; */
+	transition: max-height 0.5s ease;
+}
+
+#moreInfo.show {
+	min-height: 500px; /* Kerakli balandlikka moslab o‘zgartiring */
+}
+
+/* Umumiy ko'rinish uchun */
+#moreInfo {
+	/* Dastlab yashirin */
+	display: none; /* Oynani boshlang‘ich holatda yashirish */
+	background-color: transparent; /* Oynaga qorong‘i fon rangi */
+	padding: 20px;
+	border-radius: 10px; /* Yumshatilgan burchaklar */
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Qo‘shimcha soyali effekt */
+	color: white; /* Matn rangi */
+	margin-top: 20px;
+	overflow: hidden; /* To‘liq ko‘rinmasligi uchun */
+	opacity: 0; /* Oynaning boshlang‘ich ko‘rinmasligi */
+	transition: max-height 1.5s ease, opacity 1.5s ease; /* Faqat max-height va opacity animatsiyasi */
+	width: 80%; /* Oynaning kengligi 100% */
+	z-index: 1; /* Oynani boshqa elementlardan ustun qilish */
+	max-height: 0; /* Yashirin holatdagi maksimal balandlik */
+}
+
+/* Mobil qurilmalarga moslashish */
+@media (max-width: 768px) {
+	#moreInfo {
+		width: 90%; /* Mobilda kenglikni 90% ga o'rnatish */
+		padding: 15px; /* Paddingni biroz kamaytirish */
+	}
+
+	#moreInfo.show {
+		max-height: 300px; /* Mobilda max-height qiymatini kichikroq qilish */
+	}
+}
+
+/* Oynani ko‘rsatish holati */
+#moreInfo.show {
+	display: block;
+	opacity: 1;
+	max-height: 500px; /* Desktop uchun maksimal balandlik */
+}
+
+/* Mobil versiyada ko‘rinish uchun o'zgarishlar */
+@media (max-width: 480px) {
+	#moreInfo {
+		width: 95%; /* Juda kichik ekranlar uchun kenglikni yanada kattalashtirish */
+		padding: 10px; /* Kichik ekran uchun paddingni kamaytirish */
+	}
+
+	#moreInfo.show {
+		max-height: 250px; /* Juda kichik ekranlar uchun maksimal balandlikni kichikroq qilish */
+	}
+}
+
+/* Tugma mobilda ham yaxshi ko‘rinishi uchun */
+@media (max-width: 768px) {
+	#hideMoreBtn {
+		width: 100%; /* Mobilda butun kenglik bo'ylab tugma */
+		padding: 15px;
+		font-size: 18px; /* Mobilda kattaroq matn */
+	}
 }
 
 .image-wrapper {
@@ -683,6 +757,7 @@ nav {
 }
 
 .section-title {
+	padding-bottom: 50px;
 	position: relative;
 	margin-bottom: 60px;
 	font-family: 'Bilbo Swash Caps';
@@ -795,49 +870,150 @@ nav {
 }
 
 /* Footer */
-.footer {
-	background-color: var(--text-dark);
-	color: var(--secondary-color);
-	padding: 2rem 1rem;
+
+/* Bosh CSS (desktop view uchun) */
+footer {
+	width: 100%;
+	padding: 40px 20px;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: #222;
 }
 
-.footer__container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
-	max-width: var(--max-width);
-	margin: 0 auto;
+.section-8__btn {
+	margin-bottom: 30px;
 }
 
-.footer__col h3 {
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
+.section-8__btn a {
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.footer__col h4 {
-	font-size: 1.1rem;
-	margin-bottom: 1rem;
+.bx-chevrons-up {
+	font-size: 40px;
+	color: #ffffff;
+	margin-bottom: 7px;
+	transition: color 0.3s ease;
 }
 
-.footer__col p {
-	font-size: 0.9rem;
-	margin-bottom: 0.5rem;
-	transition: color 0.3s;
-	cursor: pointer;
-}
-
-.footer__col p:hover {
+.bx-chevrons-up:hover {
 	color: #b711e0;
 }
 
-.footer__bar {
-	text-align: center;
-	padding-top: 1rem;
-	border-top: 1px solid var(--text-light);
-	font-size: 0.8rem;
-	color: var(--secondary-color);
-	margin-top: 2rem;
+.back-to-top-text {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+	color: #ffffff;
+	transition: color 0.3s ease;
 }
+
+.back-to-top-text:hover {
+	color: #b711e0;
+}
+
+.section-8__box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+
+.section-8__box .bx {
+	padding: 10px;
+	border-radius: 50%;
+	font-size: 40px;
+	color: #ffffff;
+	transition: all 0.3s ease;
+}
+
+.section-8__box .bx:hover {
+	filter: drop-shadow(0 0 10px #b711a0);
+	transform: scale(1.2);
+	color: #b711e0;
+}
+
+.section-8__text h1 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.section-8__text span {
+	font-weight: 400;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+
+/* ✅ Media Query: max-width 950px */
+@media (max-width: 950px) {
+	.section-8__box {
+		gap: 12px;
+	}
+	.section-8__box .bx {
+		font-size: 36px;
+	}
+	.back-to-top-text {
+		font-size: 17px;
+	}
+	.section-8__text h1,
+	.section-8__text span {
+		font-size: 15px;
+	}
+}
+
+
+/* ✅ Media Query: max-width 600px */
+@media (max-width: 600px) {
+	footer {
+		padding: 30px 15px;
+	}
+	.section-8__btn {
+		margin-bottom: 25px;
+	}
+	.section-8__box .bx {
+		font-size: 32px;
+		padding: 8px;
+	}
+	.back-to-top-text {
+		font-size: 16px;
+	}
+	.section-8__text h1,
+	.section-8__text span {
+		font-size: 14px;
+	}
+}
+
+
+/* ✅ Media Query: max-width 440px */
+@media (max-width: 440px) {
+	.section-8__box {
+		gap: 10px;
+	}
+	.section-8__box .bx {
+		font-size: 28px;
+	}
+	.back-to-top-text {
+		font-size: 15px;
+	}
+	.section-8__text h1,
+	.section-8__text span {
+		font-size: 13px;
+	}
+}
+
+
+
 
 /* Media Queries */
 @media (max-width: 900px) {
@@ -881,6 +1057,7 @@ nav {
 		height: 100%;
 		margin-bottom: 50px;
 	}
+
 }
 
 @media (max-width: 600px) {

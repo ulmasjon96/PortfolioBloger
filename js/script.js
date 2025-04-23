@@ -124,3 +124,34 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+
+document.getElementById('showMoreBtn').addEventListener('click', function () {
+	const moreInfo = document.getElementById('moreInfo');
+
+	if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
+		// Oynani ko‘rsatish
+		moreInfo.style.display = 'block';
+		this.textContent = 'Yopish';
+	} else {
+		// Oynani yashirish
+		moreInfo.style.display = 'none';
+		this.textContent = "Ko'proq bilish";
+	}
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+const showMoreBtn = document.getElementById('showMoreBtn');
+const moreInfo = document.getElementById('moreInfo');
+
+showMoreBtn.addEventListener('click', function () {
+	moreInfo.classList.toggle('show');
+	this.textContent = moreInfo.classList.contains('show') ? 'Yopish' : "Ko'proq bilish";
+});
+
+document.querySelector('.section-8__btn a').addEventListener('click', function (e) {
+	e.preventDefault();
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
+});

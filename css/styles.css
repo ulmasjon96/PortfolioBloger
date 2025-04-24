@@ -24,15 +24,14 @@ body {
 html {
 	scroll-behavior: smooth;
 }
-
+/* Default nav style */
 #nav {
+	width: 100%;
 }
 
 nav {
 	width: 100%;
 	height: 10vh;
-	/* position: sticky;
-	top: 0; */
 	z-index: 100;
 	background-color: transparent;
 	margin-top: 20px;
@@ -61,6 +60,7 @@ nav {
 	font-family: 'Pacifico', cursive;
 }
 
+/* Mobile hamburger and cancel button (hidden by default) */
 .hamburg,
 .cancel {
 	display: none;
@@ -72,6 +72,7 @@ nav {
 	cursor: pointer;
 }
 
+/* Desktop menu links (horizontal) */
 .links {
 	display: flex;
 	list-style: none;
@@ -88,6 +89,7 @@ nav {
 	position: relative;
 	transition: 0.3s ease;
 }
+
 .link:hover {
 	color: #b711e0;
 }
@@ -130,12 +132,13 @@ nav {
 	margin-right: 5px;
 }
 
+/* Dropdown menu (hidden by default) */
 .dropdown {
 	z-index: 99;
 	position: absolute;
 	top: 0;
 	width: 100%;
-	transform: translateY(-500px);
+	transform: translateY(-500px); /* Hidden by default */
 	backdrop-filter: blur(4px) brightness(40%);
 	transition: transform 0.4s ease;
 }
@@ -241,7 +244,7 @@ nav {
 	height: auto;
 	display: block;
 	object-fit: cover;
-	border-radius: 1rem; /* Установим фиксированный radius */
+	border-radius: 1rem;
 	transition: transform 0.6s ease-in-out;
 	/* scale: 1.2; */
 }
@@ -457,6 +460,26 @@ nav {
 		padding: 15px;
 		font-size: 18px; /* Mobilda kattaroq matn */
 	}
+}
+
+.instogram__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 200px;
+}
+.instogram__container h1 {
+	min-width: 80%;
+	text-align: center;
+	font-family: 'Bilbo Swash Caps';
+	color: #b711e0;
+	font-size: 5rem;
+	font-weight: 900;
+	text-shadow: 0 0 10px #b711e0;
+	letter-spacing: 5px;
+	margin-bottom: 90px;
+	border-bottom: 2px solid #b711e0;
 }
 
 .image-wrapper {
@@ -828,7 +851,7 @@ nav {
 	font-weight: 700;
 	margin: 10px;
 	transition: 0.3s linear;
-	font-family: "pacifico";
+	font-family: 'pacifico';
 	/* text-wrap: nowrap; */
 	letter-spacing: 9px;
 }
@@ -1112,23 +1135,4 @@ footer {
 	.main-container .content {
 		width: 80%;
 	}
-}
-.instogram__container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-bottom: 200px;
-}
-.instogram__container h1 {
-	min-width: 80%;
-	text-align: center;
-	font-family: 'Bilbo Swash Caps';
-	color: #b711e0;
-	font-size: 5rem;
-	font-weight: 900;
-	text-shadow: 0 0 10px #b711e0;
-	letter-spacing: 5px;
-	margin-bottom: 90px;
-	border-bottom: 2px solid #b711e0;
 }

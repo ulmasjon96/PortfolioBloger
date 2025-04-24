@@ -1,7 +1,8 @@
 // 🍔 Mobil menyuni ochuvchi funksiyamiz
 function hamburg() {
 	const dropdown = document.querySelector('.dropdown');
-	dropdown.style.transform = 'translateY(0px)'; // Pastga tushuriladi (ko'rinadi)
+	dropdown.style.transform = 'translateY(0px)'
+	dropdown.style.transition = 'transform 0.4s ease'; // Pastga tushuriladi (ko'rinadi)
 }
 
 // ❌ Mobil menyuni yopuvchi funksiyamiz
@@ -155,7 +156,6 @@ document.querySelector('.section-8__btn a').addEventListener('click', function (
 		behavior: 'smooth',
 	});
 });
-
 
 //blogger
 //smm marketolog

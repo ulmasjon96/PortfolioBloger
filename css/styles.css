@@ -792,6 +792,30 @@ nav {
 	font-size: 8rem;
 	text-align: center;
 	transition: 0.3s linear;
+	height: 180px;
+}
+
+.bxs-phone-call {
+	font-size: 50px;
+	position: relative;
+	top: -80px;
+	left: 140px;
+}
+
+.bx-cog {
+	font-size: 70px;
+	position: relative;
+	top: -230px;
+}
+.bx-message-rounded-detail {
+	position: relative;
+	left: -30px;
+	top: 8px;
+}
+.bxl-play-store {
+	font-size: 50px;
+	position: relative;
+	top: -150px;
 }
 
 .services .content-card .card .info {
@@ -800,10 +824,13 @@ nav {
 
 .services .content-card .card .info h3 {
 	color: #ffffff;
-	font-size: 1.2rem;
+	font-size: 3rem;
 	font-weight: 700;
 	margin: 10px;
 	transition: 0.3s linear;
+	font-family: "pacifico";
+	/* text-wrap: nowrap; */
+	letter-spacing: 9px;
 }
 
 .services .content-card .card:hover {
@@ -954,7 +981,6 @@ footer {
 	color: #ffffff;
 }
 
-
 /* ✅ Media Query: max-width 950px */
 @media (max-width: 950px) {
 	.section-8__box {
@@ -971,7 +997,6 @@ footer {
 		font-size: 15px;
 	}
 }
-
 
 /* ✅ Media Query: max-width 600px */
 @media (max-width: 600px) {
@@ -994,7 +1019,6 @@ footer {
 	}
 }
 
-
 /* ✅ Media Query: max-width 440px */
 @media (max-width: 440px) {
 	.section-8__box {
@@ -1011,9 +1035,6 @@ footer {
 		font-size: 13px;
 	}
 }
-
-
-
 
 /* Media Queries */
 @media (max-width: 900px) {
@@ -1057,7 +1078,6 @@ footer {
 		height: 100%;
 		margin-bottom: 50px;
 	}
-
 }
 
 @media (max-width: 600px) {

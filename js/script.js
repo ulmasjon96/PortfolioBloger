@@ -155,3 +155,8 @@ document.querySelector('.section-8__btn a').addEventListener('click', function (
 		behavior: 'smooth',
 	});
 });
+
+
+//blogger
+//smm marketolog
+//brandface

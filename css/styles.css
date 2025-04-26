@@ -60,13 +60,17 @@ nav {
 	font-family: 'Pacifico', cursive;
 }
 
+.hamburg {
+	display: none;
+}
+
 /* Mobile hamburger and cancel button (hidden by default) */
 .hamburg,
 .cancel {
 	display: none;
 	position: absolute;
-	top: 25px;
-	right: 20px;
+	top: -200px;
+	right: -200px;
 	font-size: 2.5rem;
 	color: white;
 	cursor: pointer;
@@ -134,6 +138,7 @@ nav {
 
 /* Dropdown menu (hidden by default) */
 .dropdown {
+	display: none;
 	z-index: 99;
 	position: absolute;
 	top: 0;
@@ -166,14 +171,14 @@ nav {
 	padding: 5rem 1rem;
 }
 
-.section__header {
+/* .section__header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 2rem;
 	flex-wrap: wrap;
 	margin-bottom: 4rem;
-}
+} */
 
 .section__title {
 	font-size: 2rem;
@@ -182,36 +187,36 @@ nav {
 	margin-bottom: 1rem;
 }
 
-.section__subtitle {
+/* .section__subtitle {
 	font-size: 1rem;
 	color: white;
 	max-width: calc(var(--max-width) / 2);
-}
+} */
 
-.destination__nav {
+/* .destination__nav {
 	display: flex;
 	gap: 1rem;
-}
+} */
 
-.destination__nav span {
+/* .destination__nav span {
 	width: 30px;
 	height: 30px;
 	display: grid;
 	place-content: center;
 	color: white;
-
 	border-radius: 100%;
 	font-size: 1.5rem;
 	cursor: pointer;
 	transition: 0.3s;
 	background-color: #b711e0;
-	i {
-		font-size: 30px;
-		color: #000;
-	}
-}
+} */
 
-.destination__nav span:hover {
+/* .destination__nav span i {
+	font-size: 30px;
+	color: #000;
+} */
+
+/* .destination__nav span:hover {
 	color: #b711e0;
 	background-color: #000000;
 	border: 2px solid #b711e0;
@@ -220,16 +225,19 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	i {
-		font-size: 35px;
-		color: #b711e0;
-	}
-}
+} */
+
+/* .destination__nav span:hover i {
+	font-size: 35px;
+	color: #b711e0;
+} */
 
 .destination__grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 2rem;
+	overflow: hidden;
+	scroll-behavior: smooth;
 }
 
 .destination__card {
@@ -239,20 +247,17 @@ nav {
 	cursor: pointer;
 }
 
-.destination__card img {
+.destination__card video {
 	width: 100%;
 	height: auto;
 	display: block;
 	object-fit: cover;
 	border-radius: 1rem;
-	transition: transform 0.6s ease-in-out;
-	/* scale: 1.2; */
 }
 
-.destination__card img:hover {
-	transform: scale(1.2);
+.destination__card video:hover {
+	/* transform: scale(1.2); */
 	border-radius: 1rem;
-
 	transition: transform 0.8s ease-in-out, border-radius 0.8s ease-in-out;
 }
 
@@ -286,6 +291,24 @@ nav {
 .destination__subtitle {
 	font-size: 1rem;
 	font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+	.destination__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.destination__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.destination__grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* Section Home */
@@ -401,7 +424,7 @@ nav {
 }
 
 #moreInfo.show {
-	min-height: 500px; /* Kerakli balandlikka moslab o‘zgartiring */
+	min-height: 700px; /* Kerakli balandlikka moslab o‘zgartiring */
 }
 
 /* Umumiy ko'rinish uchun */
@@ -418,20 +441,8 @@ nav {
 	opacity: 0; /* Oynaning boshlang‘ich ko‘rinmasligi */
 	transition: max-height 1.5s ease, opacity 1.5s ease; /* Faqat max-height va opacity animatsiyasi */
 	width: 80%; /* Oynaning kengligi 100% */
-	z-index: 1; /* Oynani boshqa elementlardan ustun qilish */
+	z-index: 999; /* Oynani boshqa elementlardan ustun qilish */
 	max-height: 0; /* Yashirin holatdagi maksimal balandlik */
-}
-
-/* Mobil qurilmalarga moslashish */
-@media (max-width: 768px) {
-	#moreInfo {
-		width: 90%; /* Mobilda kenglikni 90% ga o'rnatish */
-		padding: 15px; /* Paddingni biroz kamaytirish */
-	}
-
-	#moreInfo.show {
-		max-height: 300px; /* Mobilda max-height qiymatini kichikroq qilish */
-	}
 }
 
 /* Oynani ko‘rsatish holati */
@@ -441,24 +452,123 @@ nav {
 	max-height: 500px; /* Desktop uchun maksimal balandlik */
 }
 
-/* Mobil versiyada ko‘rinish uchun o'zgarishlar */
-@media (max-width: 480px) {
-	#moreInfo {
-		width: 95%; /* Juda kichik ekranlar uchun kenglikni yanada kattalashtirish */
-		padding: 10px; /* Kichik ekran uchun paddingni kamaytirish */
-	}
-
-	#moreInfo.show {
-		max-height: 250px; /* Juda kichik ekranlar uchun maksimal balandlikni kichikroq qilish */
-	}
-}
-
 /* Tugma mobilda ham yaxshi ko‘rinishi uchun */
 @media (max-width: 768px) {
 	#hideMoreBtn {
 		width: 100%; /* Mobilda butun kenglik bo'ylab tugma */
 		padding: 15px;
 		font-size: 18px; /* Mobilda kattaroq matn */
+	}
+}
+
+.services {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 3rem 0;
+	transition: transform 0.5s ease;
+}
+
+.service {
+	background: transparent;
+	border-radius: 10px;
+	padding: 2rem;
+	box-shadow: 0 12px 20px #ffffff;
+	width: 300px;
+	text-align: center;
+	transform: translateY(20px);
+	opacity: 0;
+	animation: fadeIn 0.8s forwards;
+	transition: transform 0.3s ease;
+	overflow: hidden;
+}
+
+.service h2 {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.service-description {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: #555;
+	text-align: justify;
+	line-height: 1.8;
+}
+
+.read-more {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.1rem;
+	position: relative;
+	padding: 0.3rem 0.7rem;
+	transition: color 0.3s ease;
+	display: inline-block;
+}
+
+.read-more::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #b711e0;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+	transform: scaleX(1);
+}
+
+.read-more:hover {
+	color: #b711e0;
+}
+
+.service:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 16px 28px #b711e0;
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Hover effects */
+.service:hover .service-description {
+	/* color: #555;
+    font-size: 1.05rem;
+    transition: all 0.3s ease; */
+}
+
+.service:hover h2 {
+	color: #b711e0;
+	transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.services {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.service {
+		width: 90%;
 	}
 }
 
@@ -480,6 +590,20 @@ nav {
 	letter-spacing: 5px;
 	margin-bottom: 90px;
 	border-bottom: 2px solid #b711e0;
+}
+
+.destination__card img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+	border-radius: 1rem;
+}
+
+.destination__card img:hover {
+	transform: scale(1.2);
+	border-radius: 1rem;
+	transition: transform 0.8s ease-in-out, border-radius 0.8s ease-in-out;
 }
 
 .image-wrapper {
@@ -642,6 +766,14 @@ nav {
 
 /* ===== Responsive: max-width 950px (Tablet) ===== */
 @media (max-width: 950px) {
+	#moreInfo {
+		width: 90%; /* Mobilda kenglikni 90% ga o'rnatish */
+		padding: 15px; /* Paddingni biroz kamaytirish */
+	}
+
+	#moreInfo.show {
+		max-height: 300px; /* Mobilda max-height qiymatini kichikroq qilish */
+	}
 	.image-wrapper {
 		flex-wrap: wrap;
 		justify-content: center;
@@ -705,6 +837,14 @@ nav {
 
 /* ===== Responsive: max-width 440px (Small phones) ===== */
 @media (max-width: 440px) {
+	#moreInfo {
+		width: 95%; /* Juda kichik ekranlar uchun kenglikni yanada kattalashtirish */
+		padding: 10px; /* Kichik ekran uchun paddingni kamaytirish */
+	}
+
+	#moreInfo.show {
+		max-height: 250px; /* Juda kichik ekranlar uchun maksimal balandlikni kichikroq qilish */
+	}
 	.gallery .thumb {
 		width: 90px;
 		height: 130px;
@@ -1006,6 +1146,9 @@ footer {
 
 /* ✅ Media Query: max-width 950px */
 @media (max-width: 950px) {
+	.dropdown {
+		display: block;
+	}
 	.section-8__box {
 		gap: 12px;
 	}
@@ -1061,6 +1204,10 @@ footer {
 
 /* Media Queries */
 @media (max-width: 900px) {
+	#moreInfo.show {
+		min-height: 1500px; /* Kerakli balandlikka moslab o‘zgartiring */
+	}
+
 	.destination__grid {
 		gap: 1rem;
 	}
@@ -1089,8 +1236,13 @@ footer {
 	.hamburg,
 	.cancel {
 		display: block;
+		position: absolute;
+		top: 20px;
+		right: 25px;
+		font-size: 2.5rem;
+		color: white;
+		cursor: pointer;
 	}
-
 	.main-container .content {
 		width: 90%;
 	}

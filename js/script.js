@@ -1,8 +1,7 @@
 // 🍔 Mobil menyuni ochuvchi funksiyamiz
 function hamburg() {
 	const dropdown = document.querySelector('.dropdown');
-	dropdown.style.transform = 'translateY(0px)'
-	dropdown.style.transition = 'transform 0.4s ease'; // Pastga tushuriladi (ko'rinadi)
+	dropdown.style.transform = 'translateY(0px)';
 }
 
 // ❌ Mobil menyuni yopuvchi funksiyamiz
@@ -132,11 +131,11 @@ document.getElementById('showMoreBtn').addEventListener('click', function () {
 	if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
 		// Oynani ko‘rsatish
 		moreInfo.style.display = 'block';
-		this.textContent = 'Yopish';
+		this.textContent = 'Close the window.';
 	} else {
 		// Oynani yashirish
 		moreInfo.style.display = 'none';
-		this.textContent = "Ko'proq bilish";
+		this.textContent = 'Read more';
 	}
 });
 
@@ -146,7 +145,7 @@ const moreInfo = document.getElementById('moreInfo');
 
 showMoreBtn.addEventListener('click', function () {
 	moreInfo.classList.toggle('show');
-	this.textContent = moreInfo.classList.contains('show') ? 'Yopish' : "Ko'proq bilish";
+	this.textContent = moreInfo.classList.contains('show') ? 'Close the window.' : 'Read more';
 });
 
 document.querySelector('.section-8__btn a').addEventListener('click', function (e) {
@@ -154,6 +153,54 @@ document.querySelector('.section-8__btn a').addEventListener('click', function (
 	window.scrollTo({
 		top: 0,
 		behavior: 'smooth',
+	});
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	const leftArrow = document.querySelector('.destination__nav span:first-child');
+	const rightArrow = document.querySelector('.destination__nav span:last-child');
+	const grid = document.querySelector('.destination__grid');
+
+	// Scroll functionality for navigation arrows
+	leftArrow.addEventListener('click', () => {
+		grid.scrollBy({
+			left: -300, // Adjust the scroll distance
+			behavior: 'smooth',
+		});
+	});
+
+	rightArrow.addEventListener('click', () => {
+		grid.scrollBy({
+			left: 300, // Adjust the scroll distance
+			behavior: 'smooth',
+		});
+	});
+
+	// Handle hover on videos to play with sound
+	const videos = document.querySelectorAll('.destination__card video');
+
+	videos.forEach(video => {
+		video.addEventListener('mouseover', () => {
+			video.muted = false; // Unmute the video
+			video.play(); // Play the video
+		});
+
+		video.addEventListener('mouseleave', () => {
+			video.muted = true; // Mute the video again
+			video.pause(); // Pause the video
+		});
+	});
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	const readMoreButtons = document.querySelectorAll('.read-more');
+
+	readMoreButtons.forEach(button => {
+		button.addEventListener('click', function (event) {
+			event.preventDefault(); // Prevent the default anchor link behavior
+			alert("Batafsil ma'lumotni o'qish uchun ushbu havolaga bosish kerak.");
+		});
 	});
 });
 

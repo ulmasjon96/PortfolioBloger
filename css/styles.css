@@ -30,6 +30,7 @@ html {
 }
 
 nav {
+
 	width: 100%;
 	height: 10vh;
 	z-index: 100;
@@ -39,9 +40,10 @@ nav {
 
 .nav-box {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	padding-left: 80px;
+	padding-left: 140px;
+	gap: 210px;
 }
 
 .nav-container {
@@ -171,66 +173,18 @@ nav {
 	padding: 5rem 1rem;
 }
 
-/* .section__header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2rem;
-	flex-wrap: wrap;
-	margin-bottom: 4rem;
-} */
-
 .section__title {
-	font-size: 2rem;
-	font-weight: 600;
-	color: white;
-	margin-bottom: 1rem;
+	min-width: 80%;
+	text-align: center;
+	font-family: 'Bilbo Swash Caps';
+	color: #b711e0;
+	font-size: 5rem;
+	font-weight: 900;
+	text-shadow: 0 0 10px #b711e0;
+	letter-spacing: 5px;
+	margin-bottom: 90px;
+	border-bottom: 2px solid #b711e0;
 }
-
-/* .section__subtitle {
-	font-size: 1rem;
-	color: white;
-	max-width: calc(var(--max-width) / 2);
-} */
-
-/* .destination__nav {
-	display: flex;
-	gap: 1rem;
-} */
-
-/* .destination__nav span {
-	width: 30px;
-	height: 30px;
-	display: grid;
-	place-content: center;
-	color: white;
-	border-radius: 100%;
-	font-size: 1.5rem;
-	cursor: pointer;
-	transition: 0.3s;
-	background-color: #b711e0;
-} */
-
-/* .destination__nav span i {
-	font-size: 30px;
-	color: #000;
-} */
-
-/* .destination__nav span:hover {
-	color: #b711e0;
-	background-color: #000000;
-	border: 2px solid #b711e0;
-	box-shadow: 0 0 40px 5px #b711e0;
-	scale: 1.05;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
-
-/* .destination__nav span:hover i {
-	font-size: 35px;
-	color: #b711e0;
-} */
 
 .destination__grid {
 	display: grid;
@@ -238,6 +192,8 @@ nav {
 	gap: 2rem;
 	overflow: hidden;
 	scroll-behavior: smooth;
+	justify-items: center;
+	align-items: center;
 }
 
 .destination__card {
@@ -248,17 +204,16 @@ nav {
 }
 
 .destination__card video {
-	width: 100%;
+	width: 90%;
 	height: auto;
 	display: block;
 	object-fit: cover;
 	border-radius: 1rem;
+	transition: transform 0.8s ease-in-out;
 }
 
-.destination__card video:hover {
-	/* transform: scale(1.2); */
-	border-radius: 1rem;
-	transition: transform 0.8s ease-in-out, border-radius 0.8s ease-in-out;
+.destination__card:hover video {
+	transform: scale(1.05); /* Hoverda video eng kichik o'zgartirish */
 }
 
 .destination__details {
@@ -283,6 +238,13 @@ nav {
 	opacity: 1;
 }
 
+.destination__title, .destination__subtitle {
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+	/* white-space: nowrap; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .destination__title {
 	font-size: 0.9rem;
 	margin-bottom: 0.5rem;
@@ -292,6 +254,7 @@ nav {
 	font-size: 1rem;
 	font-weight: 600;
 }
+
 
 @media (max-width: 1024px) {
 	.destination__grid {
@@ -310,6 +273,7 @@ nav {
 		grid-template-columns: 1fr;
 	}
 }
+
 
 /* Section Home */
 .section-home {
@@ -766,6 +730,10 @@ nav {
 
 /* ===== Responsive: max-width 950px (Tablet) ===== */
 @media (max-width: 950px) {
+
+	.nav-box{
+		padding-left: 50px;
+	}
 	#moreInfo {
 		width: 90%; /* Mobilda kenglikni 90% ga o'rnatish */
 		padding: 15px; /* Paddingni biroz kamaytirish */
@@ -1287,4 +1255,11 @@ footer {
 	.main-container .content {
 		width: 80%;
 	}
+}
+
+.section-8__text a {
+	color: #b711e0;
+	font-size: 20px;
+	text-decoration: none;
+	font-family: 'italic';
 }

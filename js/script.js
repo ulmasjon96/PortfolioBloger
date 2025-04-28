@@ -145,7 +145,7 @@ const moreInfo = document.getElementById('moreInfo');
 
 showMoreBtn.addEventListener('click', function () {
 	moreInfo.classList.toggle('show');
-	this.textContent = moreInfo.classList.contains('show') ? 'Close the window.' : 'Read more';
+	this.textContent = moreInfo.classList.contains('show') ? 'Oynani yoping.' : 'Batafsil';
 });
 
 document.querySelector('.section-8__btn a').addEventListener('click', function (e) {
@@ -180,18 +180,41 @@ document.addEventListener('DOMContentLoaded', () => {
 	const videos = document.querySelectorAll('.destination__card video');
 
 	videos.forEach(video => {
-		video.addEventListener('mouseover', () => {
+		// On mouse enter, play the video and unmute it
+		video.addEventListener('mouseenter', () => {
 			video.muted = false; // Unmute the video
+			video.currentTime = 0; // Reset video to the start
 			video.play(); // Play the video
 		});
 
+		// On mouse leave, pause the video and mute it
 		video.addEventListener('mouseleave', () => {
-			video.muted = true; // Mute the video again
 			video.pause(); // Pause the video
+			video.muted = true; // Mute the video
+			video.currentTime = 0; // Reset video to the start
 		});
 	});
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+	// Hammasi uchun hover effektini qo'llash
+	const videos = document.querySelectorAll('.destination__card video');
+
+	videos.forEach(video => {
+		// Hover holatida videoni o'ynatish va ovozni faollashtirish
+		video.addEventListener('mouseenter', () => {
+			video.play(); // Sichqoncha video ustiga olib borilganda video o'ynaydi
+			video.muted = false; // Ovozni yoqish
+		});
+
+		// Hoverdan chiqqanda videoni to'xtatish va ovozni o'chirish
+		video.addEventListener('mouseleave', () => {
+			video.pause(); // Sichqoncha video ustidan ketganda video to'xtaydi
+			video.currentTime = 0; // Video boshlanishiga qaytadi
+			video.muted = true; // Ovozini o'chirish
+		});
+	});
+});
 
 document.addEventListener('DOMContentLoaded', function () {
 	const readMoreButtons = document.querySelectorAll('.read-more');

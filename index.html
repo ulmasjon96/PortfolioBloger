@@ -1,10 +1,11 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio Website</title>
+		<link rel="icon" href="./img/sketch-logo-24 (1).png" type="image/png" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
@@ -33,45 +34,49 @@
 				<div class="logo"><span>DJUNA</span></div>
 				<div class="nav-container">
 					<div class="links">
-						<a href="#home" class="link">Home</a>
-						<a href="#skills" class="link">Skills</a>
-						<a href="#intro" class="link">Introduction</a>
-						<a href="#services" class="link">Services</a>
-						<a href="#contact" class="link">Contact</a>
-						<a href="#contact" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Hire me</a>
+						<a href="#" class="link">Asosiy</a>
+						<a href="#blog" class="link">Mening Blogim</a>
+						<a href="#services" class="link">Xizmatlar</a>
+						<a href="#contact" class="link">Aloqa</a>
+						<a href="https://t.me/Djuna1303" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Aloqa</a>
 					</div>
 				</div>
 			</div>
 			<i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
 			<div class="dropdown" id="dropdown" onclick="toggleDropdown()">
 				<div class="links">
-					<a href="#home" class="link">Home</a>
-					<a href="#skills" class="link">Skills</a>
-					<a href="#intro" class="link">Introduction</a>
-					<a href="#services" class="link">Services</a>
-					<a href="#contact" class="link link-contact">Contact</a>
+					<a href="#" class="link">Asosiy</a>
+					<a href="#blog" class="link">Mening Blogim</a>
+					<a href="#services" class="link">Xizmatlar</a>
+					<a href="#contact" class="link link-contact">Aloqa</a>
 					<i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-					<a href="#contact" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Hire me</a>
+					<a href="https://t.me/Djuna1303" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Aloqa</a>
 				</div>
 			</div>
 		</nav>
 
-		<section class="section-home">
+		<section class="section-home" id="section-home">
 			<div class="main-container">
 				<div class="content">
-					<h1>Hey I'm <span>MARJONA</span></h1>
-					<div class="typewriter">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+					<h1>Salom men <span>MARJONA</span></h1>
+					<div class="typewriter">Men <span class="typewriter-text"></span><label for="">|</label></div>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quod quibusdam ratione illo consectetur
-						atque non iusto aspernatur numquam.
+						Instagramdagi hayot tarzi va moda bloggeriman. Kundalik hayotim, shaxsiy uslubim va munosabatlarga oid
+						samimiy, ba'zida esa kulgili postlarim orqali obunachilarim bilan yurakdan suhbat quraman. Men uchun eng
+						muhimi — samimiyat va insoniylik. Har bir postim — yuragimdan chiqqan bo‘lagi. Sevgi, hayot, moda va hazil —
+						mening ilhom manbalarim!
 					</p>
 					<div class="social-links">
-						<i class="bx bxl-youtube"></i>
-						<i class="bx bxl-telegram"></i>
-						<i class="bx bxl-instagram-alt"></i>
+						<a href="https://www.youtube.com/@Djuna.official">
+							<i class="bx bxl-youtube"></i>
+						</a>
+						<a href="https://t.me/Djuna1303"><i class="bx bxl-telegram"></i></a>
+						<a href="https://www.instagram.com/djuna.official/">
+							<i class="bx bxl-instagram-alt"></i>
+						</a>
 						<i class="fa-brands fa-twitter"></i>
 					</div>
-					<button id="showMoreBtn">Read more</button>
+					<button id="showMoreBtn">Batafsil</button>
 				</div>
 				<div class="image">
 					<img src="./img/Снимок экрана 2025-04-18 211125.png" alt="" />
@@ -115,32 +120,32 @@
 			</div>
 		</section>
 
-		<section class="section__container destination__container">
-			<h1 class="Section__title">My Blog</h1>
+		<section class="section__container destination__container" id="blog">
+			<h1 class="section__title">Mening Blogim</h1>
 			<div class="destination__grid">
 				<div class="destination__card">
-					<video src="./img/video/Yana bir oz kutarmidingiz.mp4"></video>
+					<video id="video1" src="./img/video/Yana bir oz kutarmidingiz.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
 						<p class="destination__subtitle">Yana bir oz kutarmidingiz?</p>
 					</div>
 				</div>
 				<div class="destination__card">
-					<video src="./img/video/@ruhsoraemm  Какая Джуна нравится вам больше.mp4"></video>
+					<video id="video2" src="./img/video/@ruhsoraemm  Какая Джуна нравится вам больше.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
 						<p class="destination__subtitle">Какая Джуна нравится вам больше?😜</p>
 					</div>
 				</div>
 				<div class="destination__card">
-					<video src="./img/video/djunaVideo.mp4"></video>
+					<video id="video3" src="./img/video/djunaVideo.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
 						<p class="destination__subtitle">Когда модель и фотограф понимают друг друга без слов🦦</p>
 					</div>
 				</div>
 				<div class="destination__card">
-					<video src="./img/video/adjklsgl;ahjdfksg.mp4"></video>
+					<video id="video4" src="./img/video/adjklsgl;ahjdfksg.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
 						<p class="destination__subtitle">Biz qizlarni xursand qilish judayam osson💕</p>
@@ -149,7 +154,7 @@
 			</div>
 		</section>
 
-		<section class="instogram__container">
+		<section class="instogram__container" id="intro">
 			<h1>Instagram</h1>
 
 			<div>
@@ -163,8 +168,8 @@
 							data-gallery="gallery5"
 							style="width: 314px; height: 315px; cursor: pointer" />
 						<div class="destination__details">
-							<p class="destination__title">Lauterbrunnen</p>
-							<p class="destination__subtitle">Switzerland</p>
+							<p class="destination__title">@djuna.official</p>
+							<p class="destination__subtitle">Пусть будут здесь🌝</p>
 						</div>
 					</div>
 					<div class="modal imageModal" id="gallery5">
@@ -191,8 +196,8 @@
 							data-gallery="gallery2"
 							style="width: 313px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
-							<p class="destination__title">Lauterbrunnen</p>
-							<p class="destination__subtitle">Switzerland</p>
+							<p class="destination__title">@djuna.official</p>
+							<p class="destination__subtitle">Чёрно-белые фоточки🖤 Какое понравилось больше ?</p>
 						</div>
 					</div>
 					<div class="modal imageModal" id="gallery2">
@@ -214,8 +219,10 @@
 							data-gallery="gallery3"
 							style="width: 503px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
-							<p class="destination__title">Lauterbrunnen</p>
-							<p class="destination__subtitle">Switzerland</p>
+							<p class="destination__title">@djuna.official</p>
+							<p class="destination__subtitle">
+								Alloh ayol kishini himoya qilmoqchi bo’lsa unga o’g’il farzand berar ekan🥲
+							</p>
 						</div>
 					</div>
 					<div class="modal imageModal" id="gallery3">
@@ -245,8 +252,8 @@
 							data-gallery="gallery4"
 							style="width: 314px; height: 545px; cursor: pointer" />
 						<div class="destination__details">
-							<p class="destination__title">Lauterbrunnen</p>
-							<p class="destination__subtitle">Switzerland</p>
+							<p class="destination__title">@djuna.official</p>
+							<p class="destination__subtitle">Найди свой вайб🫶🏻</p>
 						</div>
 					</div>
 					<div class="modal imageModal" id="gallery4">
@@ -268,8 +275,8 @@
 							data-gallery="gallery1"
 							style="width: 510px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
-							<p class="destination__title">Lauterbrunnen</p>
-							<p class="destination__subtitle">Switzerland</p>
+							<p class="destination__title">@djuna.official</p>
+							<p class="destination__subtitle">С днем рождения меня 🥳🤍</p>
 						</div>
 					</div>
 					<div class="modal imageModal" id="gallery1">
@@ -291,8 +298,11 @@
 							data-gallery="gallery6"
 							style="width: 307px; height: 430px; cursor: pointer" />
 						<div class="destination__details">
-							<p class="destination__title">Lauterbrunnen</p>
-							<p class="destination__subtitle">Switzerland</p>
+							<p class="destination__title">@djuna.official</p>
+							<p class="destination__subtitle">
+								2025 yilda birinchi va oxirgi! Buxoroda media sohasida mobil suratga olish bo'yicha eng katta kurs
+								muvaffaqiyatli yakunlandi!
+							</p>
 						</div>
 					</div>
 					<div class="modal imageModal" id="gallery6">
@@ -330,13 +340,14 @@
 
 		<section class="services" id="services">
 			<div class="title">
-				<h2 class="section-title">My Services</h2>
+				<h2 class="section-title">Mening Xizmatlarim</h2>
 				<p>
-					"My services are designed to help you grow, connect, and thrive in today’s digital landscape. From content
-					creation and marketing strategies to branding and social media management, I provide comprehensive solutions
-					that meet your business needs. I work closely with you to develop strategies that resonate with your target
-					audience, optimize your online presence, and build a lasting brand. Let’s collaborate and take your business
-					to the next level!"
+					"Mening xizmatlarim bugungi raqamli landshaftda o'sish, ulanish va rivojlanishga yordam berish uchun
+					mo'ljallangan. Tarkibdan brending va ijtimoiy media boshqarish uchun yaratish va marketing strategiyasi, men
+					keng qamrovli yechimlarni taqdim bu sizning biznes ehtiyojlaringizni qondiradi. Men sizning maqsadingizga mos
+					keladigan strategiyalarni ishlab chiqish uchun siz bilan yaqindan ishlayman tomoshabinlar, onlayn
+					mavjudligingizni optimallashtiring va doimiy brend yarating. Keling, hamkorlik qilaylik va biznesingizni
+					olaylik keyingi bosqichga!"
 				</p>
 			</div>
 			<div class="content-card">
@@ -347,8 +358,8 @@
 					<div class="info">
 						<h3>Blogger</h3>
 						<p>
-							"I create engaging and informative content that connects with readers, offering fresh perspectives on
-							various topics and inspiring meaningful conversations."
+							"Men kitobxonlar bilan bog'laydigan, yangi istiqbollarni taklif qiladigan qiziqarli va ma'lumotli kontent
+							yarataman turli mavzular va ilhomlantiruvchi mazmunli suhbatlar."
 						</p>
 					</div>
 				</div>
@@ -363,8 +374,9 @@
 					<div class="info">
 						<h3>Marketer</h3>
 						<p>
-							"I craft data-driven marketing strategies to help businesses grow, focusing on digital campaigns, social
-							media, SEO, and content marketing to drive results."
+							"Men raqamli kampaniyalarga e'tibor qaratib, biznesning o'sishiga yordam berish uchun ma'lumotlarga
+							asoslangan marketing strategiyalarini ishlab chiqaman natijalarni boshqarish uchun media, SEO va kontent
+							marketingi."
 						</p>
 					</div>
 				</div>
@@ -375,8 +387,8 @@
 					<div class="info">
 						<h3>Brandface</h3>
 						<p>
-							"I build strong, recognizable brands by designing unique visual identities and messaging that resonate
-							with audiences and create lasting impressions."
+							"Men rezonanslashadigan noyob vizual identifikatorlar va xabarlarni loyihalash orqali kuchli, taniqli
+							brendlarni yarataman tomoshabinlar bilan va doimiy taassurotlar yarating."
 						</p>
 					</div>
 				</div>
@@ -387,19 +399,26 @@
 			<div class="section-8__btn">
 				<a href="#">
 					<i class="bx bx-chevrons-up"></i>
-					<span class="back-to-top-text">BACK TO TOP</span>
+					<span class="back-to-top-text">YUQORIGA QAYTISH</span>
 				</a>
 			</div>
 
 			<div class="section-8__box">
-				<a href="#"><i class="bx bxl-github"></i></a>
-				<a href="#"><i class="bx bxl-vk"></i></a>
-				<a href="#"><i class="bx bxl-telegram"></i></a>
+				<a href="https://www.youtube.com/@Djuna.official">
+					<i class="bx bxl-youtube"></i>
+				</a>
+				<a href="https://t.me/Djuna1303"><i class="bx bxl-telegram"></i></a>
+				<a href="https://www.instagram.com/djuna.official/">
+					<i class="bx bxl-instagram-alt"></i>
+				</a>
 				<a href="mailto:your@email.com"><i class="bx bxl-gmail"></i></a>
 			</div>
 
 			<div class="section-8__text">
-				<h1>&copy; <span id="year"></span> Created by Ismatov O'lmasjon and <span>All Rights Reserved.</span></h1>
+				<h1>
+					&copy; <span id="year"></span> <a href="https://www.instagram.com/dasturchi.bob/">OXU_DEVELOPERS</a> tomonidan
+					yaratilgan va <span>Barcha Huquqlar Himoyalangan.</span>
+				</h1>
 			</div>
 		</footer>
 		<!-- Scripts -->

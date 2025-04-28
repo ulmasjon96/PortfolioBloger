@@ -277,6 +277,7 @@ nav {
 
 /* Section Home */
 .section-home {
+	margin-top: 50px;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -1114,6 +1115,9 @@ footer {
 
 /* ✅ Media Query: max-width 950px */
 @media (max-width: 950px) {
+	.section-home{
+		margin-top: -20px;
+	}
 	.dropdown {
 		display: block;
 	}

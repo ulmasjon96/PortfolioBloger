@@ -25,7 +25,7 @@ document.querySelectorAll('.dropdown .link').forEach(link => {
 });
 
 // 🖋 Typewriter effekt uchun so'zlar ro'yxati
-const texts = [` SMM MARKETER`, ' PHOTOGRAPHER', ' BLOGGER'];
+const texts = [` SMM MARKETER`, 'BRANDFACE', ' BLOGGER'];
 
 // 🕓 Harflar orasidagi vaqt (ms)
 let speed = 100; // yozish tezligi

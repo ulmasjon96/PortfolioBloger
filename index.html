@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio Website</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="icon" href="./img/sketch-logo-24 (1).png" type="image/png" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -38,7 +39,7 @@
 						<a href="#blog" class="link">Mening Blogim</a>
 						<a href="#services" class="link">Xizmatlar</a>
 						<a href="#contact" class="link">Aloqa</a>
-						<a href="https://t.me/Djuna1303" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Aloqa</a>
+						<!-- <a href="https://t.me/Djuna1303" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Aloqa</a> -->
 					</div>
 				</div>
 			</div>
@@ -50,21 +51,25 @@
 					<a href="#services" class="link">Xizmatlar</a>
 					<a href="#contact" class="link link-contact">Aloqa</a>
 					<i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-					<a href="https://t.me/Djuna1303" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Aloqa</a>
+					<!-- <a href="https://t.me/Djuna1303" class="link" id="hire-me"><i class="fa-regular fa-envelope"></i>Aloqa</a> -->
 				</div>
 			</div>
 		</nav>
 
-		<section class="section-home" id="section-home">
+		<section
+			class="section-home"
+			id="section-home"
+			data-aos="fade-down"
+			data-aos-easing="linear"
+			data-aos-duration="1500">
 			<div class="main-container">
-				<div class="content">
-					<h1>Salom men <span>MARJONA</span></h1>
-					<div class="typewriter">Men <span class="typewriter-text"></span><label for="">|</label></div>
+				<div class="content" data-aos="fade-left">
+					<h1>Salom men <span>Marjona Djuraeva</span></h1>
+					<div class="typewriter"><span class="typewriter-text"></span><label for="">|</label></div>
 					<p>
-						Instagramdagi hayot tarzi va moda bloggeriman. Kundalik hayotim, shaxsiy uslubim va munosabatlarga oid
-						samimiy, ba'zida esa kulgili postlarim orqali obunachilarim bilan yurakdan suhbat quraman. Men uchun eng
-						muhimi — samimiyat va insoniylik. Har bir postim — yuragimdan chiqqan bo‘lagi. Sevgi, hayot, moda va hazil —
-						mening ilhom manbalarim!
+						4 yillik media sohasidagi tajribaga ega, 3 yil davomida SMM-marketing bilan shug‘ullangan va 1 yil ichida 75
+						ming obunachiga ega bo‘lgan bloger. Buxorodagi 40 ga yaqin eng yirik loyihalarda, shuningdek, Toshkentda
+						brendlar va blogerlar bilan faoliyat yuritgan.
 					</p>
 					<div class="social-links">
 						<a href="https://www.youtube.com/@Djuna.official">
@@ -78,8 +83,8 @@
 					</div>
 					<button id="showMoreBtn">Batafsil</button>
 				</div>
-				<div class="image">
-					<img src="./img/Снимок экрана 2025-04-18 211125.png" alt="" />
+				<div class="image" data-aos="fade-right">
+					<img src="./img/cleaned_avatar.png" alt="" />
 				</div>
 			</div>
 
@@ -120,31 +125,60 @@
 			</div>
 		</section>
 
-		<section class="section__container destination__container" id="blog">
+		<section
+			class="section__container destination__container"
+			id="blog"
+			data-aos="fade-down"
+			data-aos-easing="linear"
+			data-aos-duration="1500">
 			<h1 class="section__title">Mening Blogim</h1>
 			<div class="destination__grid">
-				<div class="destination__card">
+				<div
+					class="destination__card"
+					data-aos="fade-up"
+					data-aos-anchor-placement="bottom-bottom"
+					data-aos-offset="0"
+					data-aos-delay="100"
+					data-aos-duration="1000">
 					<video id="video1" src="./img/video/Yana bir oz kutarmidingiz.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
 						<p class="destination__subtitle">Yana bir oz kutarmidingiz?</p>
 					</div>
 				</div>
-				<div class="destination__card">
+				<div
+					class="destination__card"
+					data-aos="fade-up"
+					data-aos-anchor-placement="bottom-bottom"
+					data-aos-offset="30"
+					data-aos-delay="300"
+					data-aos-duration="1000">
 					<video id="video2" src="./img/video/@ruhsoraemm  Какая Джуна нравится вам больше.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
 						<p class="destination__subtitle">Какая Джуна нравится вам больше?😜</p>
 					</div>
 				</div>
-				<div class="destination__card">
+				<div
+					class="destination__card"
+					data-aos="fade-up"
+					data-aos-anchor-placement="bottom-bottom"
+					data-aos-offset="60"
+					data-aos-delay="500"
+					data-aos-duration="1000">
 					<video id="video3" src="./img/video/djunaVideo.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
 						<p class="destination__subtitle">Когда модель и фотограф понимают друг друга без слов🦦</p>
 					</div>
 				</div>
-				<div class="destination__card">
+				<div
+					class="destination__card"
+					data-aos="fade-up"
+					data-aos-anchor-placement="bottom-bottom"
+					data-aos-delay="700"
+					data-aos-offset="90"
+					data-aos-duration="1000">
 					<video id="video4" src="./img/video/adjklsgl;ahjdfksg.mp4"></video>
 					<div class="destination__details">
 						<p class="destination__title">@djuna.official</p>
@@ -154,14 +188,27 @@
 			</div>
 		</section>
 
-		<section class="instogram__container" id="intro">
+		<section
+			class="instogram__container"
+			id="intro"
+			data-aos="fade-down"
+			data-aos-easing="linear"
+			data-aos-duration="1500">
 			<h1>Instagram</h1>
 
 			<div>
 				<div class="image-wrapper">
 					<!-- 1-Gallery -->
 
-					<div class="destination__card destination__card1">
+					<div
+						class="destination__card destination__card1"
+						data-aos="fade-right"
+						data-aos-offset="300"
+						data-aos-easing="ease-in-sine"
+						data-aos-delay="100"
+						data-aos-duration="1000">
+						<!-- Element content -->
+
 						<img
 							src="./img/sayoxat.jpg"
 							class="mainImage mainImage5"
@@ -189,7 +236,13 @@
 					</div>
 
 					<!-- 2-Gallery -->
-					<div class="destination__card destination__card2">
+					<div
+						class="destination__card destination__card2"
+						data-aos="fade-down"
+						data-aos-offset="300"
+						data-aos-easing="linear"
+						data-aos-duration="2000"
+						data-aos-delay="600">
 						<img
 							src="./img/djunaOqQoraRasm1.jpg"
 							class="mainImage mainImage2"
@@ -212,7 +265,14 @@
 					</div>
 
 					<!-- 3-Gallery -->
-					<div class="destination__card destination__card3">
+					<div
+						class="destination__card destination__card3"
+						id="example-anchor"
+						data-aos="fade-left"
+						data-aos-anchor="#example-anchor"
+						data-aos-offset="500"
+						data-aos-delay="300"
+						data-aos-duration="1000">
 						<img
 							src="./img/djunaAndSon8.jpg"
 							class="mainImage mainImage3"
@@ -245,7 +305,13 @@
 
 				<div class="image-wrapper">
 					<!-- 4-Gallery -->
-					<div class="destination__card destination__card4">
+					<div
+						class="destination__card destination__card4"
+						data-aos="fade-right"
+						data-aos-offset="300"
+						data-aos-easing="ease-in-sine"
+						data-aos-delay="100"
+						data-aos-duration="1000">
 						<img
 							src="./img/dlunaBahor1.jpg"
 							class="mainImage mainImage4"
@@ -268,7 +334,12 @@
 					</div>
 
 					<!-- 5-Gallery -->
-					<div class="destination__card destination__card5">
+					<div
+						class="destination__card destination__card5"
+						data-aos="fade-up"
+						data-aos-offset="400"
+						data-aos-duration="3000"
+						data-aos-delay="600">
 						<img
 							src="./img/432605780_376267738623597_4969665727576245015_n.jpg"
 							class="mainImage mainImage1"
@@ -291,7 +362,14 @@
 					</div>
 
 					<!-- 6-Gallery -->
-					<div class="destination__card destination__card6">
+					<div
+						class="destination__card destination__card6"
+						id="example-anchor1"
+						data-aos="fade-left"
+						data-aos-anchor="#example-anchor1"
+						data-aos-offset="400"
+						data-aos-delay="600"
+						data-aos-duration="1000">
 						<img
 							src="./img/2025new.jpg"
 							class="mainImage mainImage6"
@@ -338,10 +416,10 @@
 			</div>
 		</section>
 
-		<section class="services" id="services">
+		<section class="services" id="services" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 			<div class="title">
 				<h2 class="section-title">Mening Xizmatlarim</h2>
-				<p>
+				<p data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-offset="200">
 					"Mening xizmatlarim bugungi raqamli landshaftda o'sish, ulanish va rivojlanishga yordam berish uchun
 					mo'ljallangan. Tarkibdan brending va ijtimoiy media boshqarish uchun yaratish va marketing strategiyasi, men
 					keng qamrovli yechimlarni taqdim bu sizning biznes ehtiyojlaringizni qondiradi. Men sizning maqsadingizga mos
@@ -351,7 +429,13 @@
 				</p>
 			</div>
 			<div class="content-card">
-				<div class="card">
+				<div
+					class="card"
+					data-aos="fade-right"
+					data-aos-offset="300"
+					data-aos-easing="linear"
+					data-aos-delay="200"
+					data-aos-duration="2000">
 					<div class="service-icon">
 						<i class="bx bxl-blogger"></i>
 					</div>
@@ -363,7 +447,12 @@
 						</p>
 					</div>
 				</div>
-				<div class="card">
+				<div class="card"
+				data-aos="fade-top"
+						data-aos-offset="300"
+						data-aos-easing="linear"
+						data-aos-delay="400"
+						data-aos-duration="2000">
 					<div class="service-icon">
 						<i class="bx bxs-phone-call"></i>
 						<i class="bx bx-message-rounded-detail"></i>
@@ -380,7 +469,11 @@
 						</p>
 					</div>
 				</div>
-				<div class="card">
+				<div class="card" data-aos="fade-left"
+						data-aos-offset="300"
+						data-aos-easing="linear"
+						data-aos-delay="600"
+						data-aos-duration="2000">
 					<div class="service-icon">
 						<i class="fas fa-file-code"></i>
 					</div>
@@ -395,7 +488,7 @@
 			</div>
 		</section>
 		<!-- Footer -->
-		<footer class="footer" id="contact">
+		<footer class="footer" id="contact" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
 			<div class="section-8__btn">
 				<a href="#">
 					<i class="bx bx-chevrons-up"></i>
@@ -426,6 +519,9 @@
 		<script src="./js/script.js"></script>
 		<script>
 			AOS.init({ offset: 0 });
+		</script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+			AOS.init();
 		</script>
 	</body>
 </html>

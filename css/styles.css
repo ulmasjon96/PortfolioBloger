@@ -6,7 +6,11 @@
 	--text-light: #767268;
 	--extra-light: #ffffff;
 	--max-width: 1250px;
-	--all-color: #f5deb3;
+	--all-color: #dcceb3;
+	--all-color2: #00ff00;
+	--background-color: #222222;
+	--background-color2: #121212;
+	--background-color3: #3a3a3a;
 }
 
 * {
@@ -18,7 +22,7 @@
 body {
 	width: 100%;
 	height: 100vh;
-	background-color: #121212;
+	background-color: var(--background-color2);
 	font-family: 'Arvo', serif;
 }
 
@@ -58,8 +62,8 @@ nav {
 
 .logo span {
 	color: var(--all-color);
-	text-shadow: 0 0 50px var(--all-color);
-	/* font-family: 'Poppins'; */
+	/* text-shadow: 0 0 px var(--all-color); */
+	font-family: 'Poppins';
 }
 
 .hamburg {
@@ -174,7 +178,8 @@ nav {
 }
 
 .section__title {
-	min-width: 80%;
+	padding-bottom: 50px;
+	min-width: 90%;
 	text-align: center;
 	font-family: 'Bilbo Swash Caps';
 	color: var(--all-color);
@@ -276,6 +281,13 @@ nav {
 
 /* Section Home */
 .section-home {
+	/* background-image: url(../img/djunalogo.JPG);
+	/* background-position-y: 50px; */
+	/* background-size: 50%;
+	background-position: right;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	min-height: 100vh; */
 	margin-top: 50px;
 	width: 100%;
 	height: auto;
@@ -299,16 +311,19 @@ nav {
 	width: 40%;
 	color: white;
 	text-align: left;
+	order: 2;
 }
 
 .content h1 {
 	font-size: clamp(1rem, 4vw, 2.5rem);
+	text-wrap: nowrap;
 }
 
 .content h1 span {
 	color: var(--all-color);
-	text-shadow: 0 0 10px var(--all-color);
+	/* text-shadow: 0 0 10px var(--all-color); */
 	font-weight: bold;
+	text-wrap: nowrap;
 }
 
 .typewriter {
@@ -319,7 +334,7 @@ nav {
 
 .typewriter span {
 	color: var(--all-color);
-	text-shadow: 0 0 10px var(--all-color);
+	/* text-shadow: 0 0 10px var(--all-color); */
 }
 
 .content p {
@@ -366,17 +381,23 @@ nav {
 }
 
 .image {
-	width: 500px;
-	height: 80vh;
+	order: 1;
+	width: 700px;
+	height: 100vh;
 	overflow: hidden;
-	border-radius: 50%;
-	box-shadow: 0 0 50px var(--all-color);
+	/* border-radius: 50%; */
+	/* box-shadow: 0 0 50px var(--all-color); */
 }
 
 .image img {
 	width: 100%;
-	height: 100%;
+	/* height: 100; */
 	object-fit: cover;
+	margin: 20px;
+
+	position: relative;
+	left: -80px;
+	top: -90px;
 }
 #moreInfo {
 	display: none; /* Dastlab yashirin */
@@ -460,7 +481,7 @@ nav {
 .service-description {
 	font-size: 1rem;
 	margin-bottom: 1rem;
-	color: #555;
+	color: #ffffff;
 	text-align: justify;
 	line-height: 1.8;
 }
@@ -549,13 +570,14 @@ nav {
 	margin-bottom: 200px;
 }
 .instogram__container h1 {
-	min-width: 80%;
+	padding-bottom: 50px;
+	min-width: 90%;
 	text-align: center;
 	font-family: 'Bilbo Swash Caps';
 	color: var(--all-color);
 	font-size: 5rem;
 	font-weight: 900;
-	text-shadow: 0 0 10px var(--all-color);
+	text-shadow: 0 0 5px var(--all-color);
 	letter-spacing: 5px;
 	margin-bottom: 90px;
 	border-bottom: 2px solid var(--all-color);
@@ -896,7 +918,7 @@ nav {
 	position: relative;
 	margin-bottom: 60px;
 	font-family: 'Bilbo Swash Caps';
-	min-width: 80%;
+	min-width: 90%;
 	text-align: center;
 	font-family: 'Bilbo Swash Caps';
 	color: var(--all-color);
@@ -979,13 +1001,13 @@ nav {
 .services .content-card .card:hover .service-icon,
 .services .content-card .card:hover .info h3 {
 	transform: translateY(-10px);
-	color: var(--all-color);;
+	color: var(--all-color);
 }
 
 .services .content-card .card:hover .service-icon,
 .services .content-card .card:hover .info p {
 	transform: translateY(-10px);
-	color: var(--all-color);;
+	color: var(--all-color);
 	transition: 0.3s linear;
 }
 
@@ -1064,7 +1086,7 @@ footer {
 }
 
 .bx-chevrons-up:hover {
-	color: var(--all-color);;
+	color: var(--all-color);
 }
 
 .back-to-top-text {
@@ -1077,7 +1099,7 @@ footer {
 }
 
 .back-to-top-text:hover {
-	color: var(--all-color);;
+	color: var(--all-color);
 }
 
 .section-8__box {
@@ -1100,7 +1122,7 @@ footer {
 .section-8__box .bx:hover {
 	filter: drop-shadow(0 0 10px var(--all-color));
 	transform: scale(1.2);
-	color: var(--all-color);;
+	color: var(--all-color);
 }
 
 .section-8__text h1 {
@@ -1118,6 +1140,18 @@ footer {
 
 /* ✅ Media Query: max-width 950px */
 @media (max-width: 950px) {
+	.image img {
+		position: relative;
+		left: -10px;
+		top: -10px;
+	}
+
+	.content {
+		order: 1;
+	}
+	.image {
+		order: 2;
+	}
 	.section-home {
 		margin-top: -20px;
 	}
@@ -1265,7 +1299,7 @@ footer {
 }
 
 .section-8__text a {
-	color: var(--all-color);;
+	color: var(--all-color);
 	font-size: 20px;
 	text-decoration: none;
 	font-family: 'italic';

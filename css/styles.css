@@ -62,7 +62,6 @@ nav {
 
 .logo span {
 	color: var(--all-color);
-	/* text-shadow: 0 0 px var(--all-color); */
 	font-family: 'Poppins';
 }
 
@@ -246,7 +245,6 @@ nav {
 .destination__title,
 .destination__subtitle {
 	text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-	/* white-space: nowrap; */
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -281,13 +279,6 @@ nav {
 
 /* Section Home */
 .section-home {
-	/* background-image: url(../img/djunalogo.JPG);
-	/* background-position-y: 50px; */
-	/* background-size: 50%;
-	background-position: right;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	min-height: 100vh; */
 	margin-top: 50px;
 	width: 100%;
 	height: auto;
@@ -321,7 +312,6 @@ nav {
 
 .content h1 span {
 	color: var(--all-color);
-	/* text-shadow: 0 0 10px var(--all-color); */
 	font-weight: bold;
 	text-wrap: nowrap;
 }
@@ -334,7 +324,6 @@ nav {
 
 .typewriter span {
 	color: var(--all-color);
-	/* text-shadow: 0 0 10px var(--all-color); */
 }
 
 .content p {
@@ -385,13 +374,10 @@ nav {
 	width: 700px;
 	height: 100vh;
 	overflow: hidden;
-	/* border-radius: 50%; */
-	/* box-shadow: 0 0 50px var(--all-color); */
 }
 
 .image img {
 	width: 100%;
-	/* height: 100; */
 	object-fit: cover;
 	margin: 20px;
 
@@ -403,8 +389,6 @@ nav {
 	display: none; /* Dastlab yashirin */
 }
 #moreInfo {
-	/* max-height: 0; */
-	/* overflow: hidden; */
 	transition: max-height 0.5s ease;
 }
 
@@ -531,13 +515,6 @@ nav {
 		transform: translateY(0);
 		opacity: 1;
 	}
-}
-
-/* Hover effects */
-.service:hover .service-description {
-	/* color: #555;
-    font-size: 1.05rem;
-    transition: all 0.3s ease; */
 }
 
 .service:hover h2 {
@@ -697,7 +674,6 @@ nav {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	/* overflow: auto; */
 	background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -986,7 +962,6 @@ nav {
 	margin: 10px;
 	transition: 0.3s linear;
 	font-family: 'pacifico';
-	/* text-wrap: nowrap; */
 	letter-spacing: 9px;
 }
 
@@ -1223,8 +1198,6 @@ footer {
 
 	.footer__container {
 		width: 95%;
-		/* height: auto; */
-		/* grid-template-columns: 1fr; */
 	}
 
 	.section-home {

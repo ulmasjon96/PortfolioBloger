@@ -226,7 +226,3 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
-
-//blogger
-//smm marketolog
-//brandface

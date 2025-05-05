@@ -9,8 +9,10 @@
 	--all-color: #dcceb3;
 	--all-color2: #00ff00;
 	--background-color: #222222;
-	--background-color2: #121212;
+	--background-color2: hsla(0, 0%, 7%, 0.4);
 	--background-color3: #3a3a3a;
+	--all-family: 'Playfair Display';
+	--all-size-title: 4rem;
 }
 
 * {
@@ -22,12 +24,31 @@
 body {
 	width: 100%;
 	height: 100vh;
-	background-color: var(--background-color2);
+	background-image: url(../img/backgraund2.JPG);
+	background-position-y: -700px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* overflow: hidden; */
+
+	/* background-color: var(--background-color2); */
 	/* font-family: 'inter'; */
+	/* font-family: "roboto mono"; */
 	/* font-family: "roboto"; */
-	font-family: "montserrat";
-	/* font-family: "work sans"; */
-	/* font-family: "Space Grotesk"; */
+	/* font-family: "Cascadia Code"; */
+	/* font-family: 'montserrat'; */
+	/* font-family: "Playfair Display"; */
+	/* font-family: "raleway"; */
+	/* font-family: "Lora "; */
+	font-family: 'Space Grotesk';
+	/* font-style: italic; */
+}
+
+main{
+	/* background-color: rgba(255, 255, 255, 0.5); */
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top: -20px;
 }
 
 html {
@@ -44,6 +65,7 @@ nav {
 	z-index: 100;
 	background-color: transparent;
 	margin-top: 20px;
+	padding-top: 20px;
 }
 
 .nav-box {
@@ -66,7 +88,7 @@ nav {
 
 .logo span {
 	color: var(--all-color);
-	font-family: 'Poppins';
+	/* font-family: 'Poppins'; */
 }
 
 .hamburg {
@@ -184,11 +206,11 @@ nav {
 	padding-bottom: 50px;
 	min-width: 90%;
 	text-align: center;
-	font-family: 'Bilbo Swash Caps';
+	font-family: var(--all-family);
 	color: var(--all-color);
-	font-size: 5rem;
+	font-size: var(--all-size-title);
 	font-weight: 900;
-	text-shadow: 0 0 10px var(--all-color);
+	text-shadow: 0 0 7px var(--all-color);
 	letter-spacing: 5px;
 	margin-bottom: 90px;
 	border-bottom: 2px solid var(--all-color);
@@ -296,10 +318,11 @@ nav {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	/* justify-content: space-evenly; */
 	align-items: center;
 	flex-wrap: wrap;
 	text-align: center;
+	margin-left: 300px;
 }
 
 .content {
@@ -554,11 +577,11 @@ nav {
 	padding-bottom: 50px;
 	min-width: 90%;
 	text-align: center;
-	font-family: 'Bilbo Swash Caps';
+	font-family: var(--all-family);
 	color: var(--all-color);
-	font-size: 5rem;
+	font-size: var(--all-size-title);
 	font-weight: 900;
-	text-shadow: 0 0 5px var(--all-color);
+	text-shadow: 0 0 7px var(--all-color);
 	letter-spacing: 5px;
 	margin-bottom: 90px;
 	border-bottom: 2px solid var(--all-color);
@@ -737,6 +760,12 @@ nav {
 
 /* ===== Responsive: max-width 950px (Tablet) ===== */
 @media (max-width: 950px) {
+	body{
+		/* background-position: ; */
+		/* background-size: cover; */
+		background-position: center;
+
+	}
 	.nav-box {
 		padding-left: 50px;
 	}
@@ -895,18 +924,15 @@ nav {
 
 .section-title {
 	padding-bottom: 50px;
-	position: relative;
-	margin-bottom: 60px;
-	font-family: 'Bilbo Swash Caps';
 	min-width: 90%;
 	text-align: center;
-	font-family: 'Bilbo Swash Caps';
+	font-family: var(--all-family);
 	color: var(--all-color);
-	font-size: 5rem;
+	font-size: var(--all-size-title);
 	font-weight: 900;
-	text-shadow: 0 0 10px var(--all-color);
+	text-shadow: 0 0 7px var(--all-color);
 	letter-spacing: 5px;
-	margin-bottom: 80px;
+	margin-bottom: 90px;
 	border-bottom: 2px solid var(--all-color);
 }
 
@@ -965,7 +991,7 @@ nav {
 	font-weight: 700;
 	margin: 10px;
 	transition: 0.3s linear;
-	font-family: 'pacifico';
+	font-family: var(--all-family);
 	letter-spacing: 9px;
 }
 
@@ -1069,7 +1095,6 @@ footer {
 }
 
 .back-to-top-text {
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 18px;
 	letter-spacing: 1.5px;
@@ -1105,7 +1130,6 @@ footer {
 }
 
 .section-8__text h1 {
-	font-family: 'Nunito', sans-serif;
 	font-weight: 700;
 	font-size: 16px;
 	color: #ffffff;
@@ -1188,6 +1212,10 @@ footer {
 	.section-8__text span {
 		font-size: 13px;
 	}
+	.section-title {
+		font-size: 50px;
+		text-wrap: wrap;
+	}
 }
 
 /* Media Queries */
@@ -1213,7 +1241,9 @@ footer {
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: column-reverse;
+		margin: auto;
 	}
+
 
 	.nav-container .links {
 		display: none;
@@ -1273,11 +1303,17 @@ footer {
 	.main-container .content {
 		width: 80%;
 	}
+	.instogram__container h1 {
+		font-size: 50px;
+	}
+	.section__title {
+		font-size: 50px;
+	}
 }
 
 .section-8__text a {
 	color: var(--all-color);
 	font-size: 20px;
 	text-decoration: none;
-	font-family: 'italic';
+	font-style: italic;
 }

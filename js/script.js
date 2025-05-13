@@ -226,3 +226,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+	const rows = document.querySelectorAll('.pricing table tbody tr');
+	rows.forEach(row => {
+		row.addEventListener('mouseover', () => {
+			row.style.backgroundColor = '#e8eaf6';
+		});
+		row.addEventListener('mouseout', () => {
+			row.style.backgroundColor = '';
+		});
+	});
+});
